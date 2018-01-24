@@ -1,2 +1,2 @@
-# SoundScape
+# NoiseScape
 Musical wind machine
