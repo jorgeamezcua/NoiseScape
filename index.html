@@ -1,65 +1,199 @@
-<script src="js/p5.js"> </script>
-<script src="js/p5.dom.js"> </script>
-<script src="js/p5.sound.js"> </script>
-<script src="js/script.js"> </script>
-<link rel="stylesheet" type="text/css" href="css/estilo.css">
+<!DOCTYPE html>
+<html lang="es">
 
-<div class= "header">
-  <h1> NoiseScape </h1>
-  <h2> - a musical wind machine - </h2>
-</div>
-<div class= "sky">
-<div class="keyboard">
-  <div class="keyboard__row">
-    <kbd class="keyboard__key keyboard__blank"></kbd>
-    <kbd class="keyboard__key" id= "key_W">W</kbd>
-    <kbd class="keyboard__key" id= "key_E">E</kbd>
-    <kbd class="keyboard__key keyboard__blank"></kbd>
-    <kbd class="keyboard__key keyboard__blank"></kbd>
-    <kbd class="keyboard__key" id= "key_T">T</kbd>
-    <kbd class="keyboard__key" id= "key_Y">Y</kbd>
-    <kbd class="keyboard__key" id= "key_U">U</kbd>
-    <kbd class="keyboard__key keyboard__blank"></kbd>
-  </div>
-  <div class="keyboard__row">
-    <kbd class="keyboard__key" id= "key_A">A</kbd>
-    <kbd class="keyboard__key" id= "key_S">S</kbd>
-    <kbd class="keyboard__key" id= "key_D">D</kbd>
-    <kbd class="keyboard__key" id= "key_F">F</kbd>
-    <kbd class="keyboard__key" id= "key_G">G</kbd>
-    <kbd class="keyboard__key" id= "key_H">H</kbd>
-    <kbd class="keyboard__key" id= "key_J">J</kbd>
-  </div>
-</div>
-</div>
+  <head>
 
-<div class="piso">
-  <div class= "container">
-    <div class="cuadros">
-      <div class="cuadroT"> Octave </div>
-      <div class="cuadroV" id="octave"> 0 </div>
-      <div class="instr instrA"> - Z   X + </div>
-      <div class="cuadroT2"> Sustain </div>
-      <div class="cuadroV2" id="sustain"> Off </div>
-      <div class="instr2 instrA"> C </div>
-    </div>
-    <div class="cuadros">
-      <div class="cuadroT"> Amp. </div>
-      <div class="cuadroV" id="ampTxt"> 150 </div>
-      <input class="instr" id= "ampSldr" type= "range" step = "1" min= "0" max="500" value="150" onchange="lfoAmp()"></input>
-      <div class="cuadroT2"> Freq. </div>
-      <div class="cuadroV2" id="freqTxt"> 0.1 </div>
-      <input class="instr2" id= "freqSldr" type= "range" step = "0.01" min= "0" max="1" value="0.1" onchange="lfoFreq()"></input>
-    </div>
-    <div class="cuadros">
-      <div class="cuadroT"> Q </div>
-      <div class="cuadroV" id="qTxt"> 15 </div>
-      <input class="instr instrC" id= "qSldr" type= "range" min= "1" max="50" value="12" onchange="noiseQ()"></input>
-      <div class="cuadroT2"> Record </div>
-      <div class="cuadroV2 recBtn">
-        <button type = "button" id= "recBtn" onclick="clickRec()"> OFF </button>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Jorge Amezcua</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/2-col-portfolio.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Jorge Amezcua</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Proyectos
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Formación</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contacto</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    <!--  <div class="instr2"> press </div> -->
-    </div>
+    </nav>
+    <!-- Page Heading -->
+    <div class= "Header-fixed fixed-top">
+    <h1>Proyectos
+      <small>Video</small>
+    </h1>
   </div>
-</div>
+
+    <!-- Page Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 portfolio-item">
+          <div class="card h-100">
+            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="#">Diciembretrece - Mi Imaginación</a>
+              </h4>
+              <p class="card-text">
+              Dirección de video <br>
+              Edición <br>
+              Asistente de audio </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 portfolio-item">
+          <div class="card h-100">
+            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="#">Daniel Navarro - TOKIO</a>
+              </h4>
+              <p class="card-text">Dirección de video <br>
+              Edición </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 portfolio-item">
+          <div class="card h-100">
+            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="#">Tania Matus - Temporales</a>
+              </h4>
+              <p class="card-text">Operación de cámara <br>
+              Edición </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 portfolio-item">
+          <div class="card h-100">
+            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="#"> Tania Matus - Esta Tarde</a>
+              </h4>
+              <p class="card-text">Operación de cámara <br>
+              Edición </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 portfolio-item">
+          <div class="card h-100">
+            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="#">Project Five</a>
+              </h4>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 portfolio-item">
+          <div class="card h-100">
+            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="#">Project Six</a>
+              </h4>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit aliquam aperiam nulla perferendis dolor nobis numquam, rem expedita, aliquid optio, alias illum eaque. Non magni, voluptates quae, necessitatibus unde temporibus.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 portfolio-item">
+          <div class="card h-100">
+            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="#">Project Five</a>
+              </h4>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 portfolio-item">
+          <div class="card h-100">
+            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="#">Project Six</a>
+              </h4>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit aliquam aperiam nulla perferendis dolor nobis numquam, rem expedita, aliquid optio, alias illum eaque. Non magni, voluptates quae, necessitatibus unde temporibus.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.row -->
+
+      <!-- Pagination -->
+      <ul class="pagination justify-content-center">
+        <li class="page-item">
+          <a class="page-link" href="#" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+            <span class="sr-only">Previous</span>
+          </a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#">1</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#">2</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#">3</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+            <span class="sr-only">Next</span>
+          </a>
+        </li>
+      </ul>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white"></p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+
+</html>
