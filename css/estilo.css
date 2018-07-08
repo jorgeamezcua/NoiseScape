@@ -1,0 +1,79 @@
+
+html{
+  height:100%;
+}
+
+body{
+  margin: 0 auto;
+  padding: 0;
+  height:100%;
+  background-image: url("images/Blue-And-Green.jpg");
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.titulo_zona{
+  color:white;
+  font-family: sans-serif;
+  font-size: 2em;
+}
+
+@keyframes opacity {
+    from {opacity: 0;}
+    to {opacity:1;}
+}
+
+#zona{
+  width: 20%;
+  height: 10%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  animation-name: opacity;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+}
+#sombra{
+  background-color: #556F7A
+
+}
+
+.zona1-2-3{
+  width: 20%;
+  height: 20%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  animation-name: opacity;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+}
+
+.zona1{
+  background-color: #f6000c;
+}
+
+.zona2{
+  background-color: #009A8F;
+}
+
+.zona3{
+  background-color: #FB6D00;
+}
+
+.zona4{
+  background-color: #009A8F;
+}
+
+.zona5{
+  background-color: #C50078;
+
+}
