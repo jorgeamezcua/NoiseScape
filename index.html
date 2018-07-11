@@ -8,32 +8,136 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/script.js"></script>
 
     <title>Jorge Amezcua</title>
 
     <link href="css/estilo.css" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro|Work+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
   </head>
   <body>
 
-    <div class="container">
-      <div class="zona1" id="zona">
+    <audio preload="none" id="AudioJazz">
+<source src="Proyectos/Musica/Excitement/Excitement_JorgeAmezcua.mp3"></audio>
+  <source src="Proyectos/Musica/Excitement/Excitement_JorgeAmezcua.ogg"></audio>
+    <audio preload="none" id="AudioSolil">
+<source src="Proyectos/Musica/Soliloquio/Soliloquio.mp3"></audio>
+  <source src="Proyectos/Musica/Soliloquio/Soliloquio.ogg"></audio>
+
+    <div id="modalJazz" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <embed class="embedPDF" src="Proyectos/Musica/Excitement/Excitement_JorgeAmezcua.pdf"></embed>
+     </div>
+   </div>
+   <div id="modalSolil" class="modal">
+     <div class="modal-content">
+       <span class="close">&times;</span>
+       <embed class="embedPDF" src="Proyectos/Musica/Soliloquio/Soliloquio.pdf"></embed>
+    </div>
+  </div>
+  <div id="modalSueno" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <embed class="embedPDF" src="Proyectos/Guion/Sueno_adaptacion.pdf"></embed>
+   </div>
+ </div>
+
+    <div class="background">
+    <div class="grid">
+    <!--TITULOS-->
+      <div class="zona zona1">
         <p class="titulo_zona"> Animación </p>
       </div>
-      <div class="zona2" id="zona">
+      <div class="zona zona2">
         <p class="titulo_zona"> Audio </p>
       </div>
-      <div class="zona3" id="zona">
+      <div class="zona zona3">
         <p class="titulo_zona"> Música </p>
       </div>
-      <div class="zona4" id="zona">
+      <div class="zona zona4">
         <p class="titulo_zona"> Video </p>
       </div>
-      <div class="zona5" id="zona">
+      <div class="zona zona5">
         <p class="titulo_zona"> Guión </p>
       </div>
-    </div>
+      <!--ELEMENTOS-->
+      <div style="cursor: pointer;" onclick="window.location='Proyectos/NoiseScape';"
+            class= "elemento app">
+            <img id="imgApp" src="Proyectos/NoiseScape/imgNoiseScape.png"></img>
+        <div class="sombra"> NoiseScape es una herramienta de diseño sonoro que simula viento, pero con las características armónicas de las notas musicales. De esta forma, se pueden crear atmósferas tenebrosas, alegres, o con cualquier nivel de tensión que una escala musical pueda dar. </div>
+      </div>
 
+      <div class= "elemento insectos">
+          <div class="sombra"> </div>
+      </div>
+
+      <div class= "elemento jazz">
+        <div class="imgMusica" >
+          <img class="imgPlayM" id="imgPlayJazz" src="css/img/play_musica.png"
+          style="cursor: pointer;" onclick="togglePlayJazz()">
+        </img>
+          <img class="imgPdf" id="imgPdfJazz" style="cursor: pointer;" src="css/img/score.png"></img></div>
+        <div class="sombra">
+          <p class="txtMusica"> "Excitement"</p>
+          <p class="txtPeq"> Composición original </p>
+        </div>
+     </div>
+
+     <div class= "elemento solil">
+       <div class="imgMusica" >
+         <img class="imgPlayM" id="imgPlaySolil" src="css/img/play_musica.png"
+         style="cursor: pointer;" onclick="togglePlaySolil()">
+       </img>
+         <img class="imgPdf" id="imgPdfSolil" style="cursor: pointer;" src="css/img/score.png"></img>
+       </div>
+       <div class="sombra">
+         <p class="txtMusica"> "Solilóquio"</p>
+         <p class="txtPeq"> Arreglo orquestal </p>
+       </div>
+    </div>
+    <div class= "elemento adaptacion">
+      <div class="imgMusica" >
+      <img class="imgPdf" id="imgPdfSueno" style="cursor: pointer;" src="css/img/imgPdf.png"></img>
+    </div>
+      <div class="sombra">
+        <p class="txtMusica"> "Sueño"</p>
+        <p class="txtPeq"> Adaptación</p>
+      </div>
+    </div>
+    <div class= "elemento insectos">
+      <div class="imgMusica" >
+        <img class="imgPdf" id="imgPdfCerebro" src="css/img/cerebro.png"></img>
+      </div>
+      <div class="sombra">
+        <p class="txtMusica"> Guión Original</p>
+        <p class="txtPeq"> (En proceso) </p>
+      </div>
+   </div>
+   <figure class= "elemento Genera">
+       <div class="sombra"> Genera</div>
+       <iframe class="video" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+       </iframe>
+       <iframe class="video" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+       </iframe></figure>
+   <figure class= "elemento Temporales">
+     <div class="sombra"> Temporales</div>
+     <iframe class="elem" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+     </iframe></figure>
+   <figure class= "elemento noise">
+     <div class="sombra"> noise</div>
+     <iframe class="elem" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+     </iframe></figure>
+   <figure class= "elemento dic13">
+       <div class="sombra"> dic13</div>
+       <iframe class="elem" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+       </iframe>
+   </figure>
+
+
+    </div>
+    </div>
   </body>
 </html>
