@@ -451,7 +451,5 @@ span{
   display: none;
 }
 }/*Desktop*/
-
-@media (max-width:960px) { /*---------------------Móvil*/
-
-}
+/*
+@media (max-width:960px) {} /*---------------------Móvil*/
