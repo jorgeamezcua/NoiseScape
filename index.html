@@ -25,6 +25,9 @@
     <audio preload="none" id="AudioSolil">
 <source src="Proyectos/Musica/Soliloquio/Soliloquio.mp3"></audio>
   <source src="Proyectos/Musica/Soliloquio/Soliloquio.ogg"></audio>
+    <audio preload="none" id="AudioBass">
+<source src="Proyectos/Musica/Bass/Bass.mp3"></audio>
+  <source src="Proyectos/Musica/Bass/Bass.ogg"></audio>
 
     <div id="modalJazz" class="modal">
       <div class="modal-content">
@@ -44,15 +47,43 @@
       <embed class="embedPDF" src="Proyectos/Guion/Sueno_adaptacion.pdf"></embed>
    </div>
  </div>
+ <div id="modalVideo" class="modal">
+   <div class="modal-content">
+     <span class="close">&times;</span>
+     <embed class="embedVideo" src=""></embed>
+  </div>
+</div>
+<div id="modalApp" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <embed class="embedApp" src="Proyectos/NoiseScape" width="100%" height="100%"></embed>
+ </div>
+</div>
+
+<div id="modalContacto" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScjpJAEJI6U0pKgUK6hy50irymltAYDhxDWSlId_mRVFwdEHw/viewform?embedded=true" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0">Cargando...</iframe>
+ </div>
+</div>
+
+<!--
+ <iframe class="videoTemp" src="https://www.youtube.com/embed/ubvK5Z4ICJw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+ </iframe>
+ <iframe class="videoTemp" src="https://www.po?ube.com/embed/ubvK5Z4ICJw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+ </iframe>
+ <iframe class="noise" src="https://www.po?ube.com/embed/tgbNymZ7vqY">
+ </iframe>
+-->
 
     <div class="background">
     <div class="grid">
     <!--TITULOS-->
       <div class="zona zona1">
-        <p class="titulo_zona"> Animación </p>
+        <p class="titulo_zona"> Audio </p>
       </div>
       <div class="zona zona2">
-        <p class="titulo_zona"> Audio </p>
+        <p class="titulo_zona"> Animación </p>
       </div>
       <div class="zona zona3">
         <p class="titulo_zona"> Música </p>
@@ -64,77 +95,144 @@
         <p class="titulo_zona"> Guión </p>
       </div>
       <!--ELEMENTOS-->
-      <div style="cursor: pointer;" onclick="window.location='Proyectos/NoiseScape';"
-            class= "elemento app">
-            <img id="imgApp" src="Proyectos/NoiseScape/imgNoiseScape.png"></img>
-        <div class="sombra"> NoiseScape es una herramienta de diseño sonoro que simula viento, pero con las características armónicas de las notas musicales. De esta forma, se pueden crear atmósferas tenebrosas, alegres, o con cualquier nivel de tensión que una escala musical pueda dar. </div>
-      </div>
-
-      <div class= "elemento insectos">
-          <div class="sombra"> </div>
+      <div class= "elemento app" id="containerApp" style="cursor: pointer;">
+            <img id="imgApp" src="css/img/imgNoiseScape.png"></img>
+        <div class="sombra" id="txtApp">
+          <p class="txtMusica"> NoiseScape web app </p>
+          <p class="txtMedio"> (Herramienta de diseño sonoro)</p>
+          <p class="txtPeq">  Programación y diseño </p>
+        </div>
       </div>
 
       <div class= "elemento jazz">
-        <div class="imgMusica" >
+        <div class="imgMusica" id="containerJ">
           <img class="imgPlayM" id="imgPlayJazz" src="css/img/play_musica.png"
           style="cursor: pointer;" onclick="togglePlayJazz()">
         </img>
-          <img class="imgPdf" id="imgPdfJazz" style="cursor: pointer;" src="css/img/score.png"></img></div>
-        <div class="sombra">
+          <img class="imgPdf" id="imgPdfJazz" style="cursor: pointer;" src="css/img/score.png"></img>
+        <div class="sombra" id='txtJ'>
           <p class="txtMusica"> "Excitement"</p>
           <p class="txtPeq"> Composición original </p>
+        </div>
         </div>
      </div>
 
      <div class= "elemento solil">
-       <div class="imgMusica" >
+       <div class="imgMusica" id="containerSol">
          <img class="imgPlayM" id="imgPlaySolil" src="css/img/play_musica.png"
          style="cursor: pointer;" onclick="togglePlaySolil()">
        </img>
          <img class="imgPdf" id="imgPdfSolil" style="cursor: pointer;" src="css/img/score.png"></img>
-       </div>
-       <div class="sombra">
-         <p class="txtMusica"> "Solilóquio"</p>
-         <p class="txtPeq"> Arreglo orquestal </p>
+         <div class="sombra" id='txtSol'>
+           <p class="txtMusica"> "Solilóquio"</p>
+           <p class="txtPeq"> Arreglo orquestal </p>
+        </div>
        </div>
     </div>
+
+    <div class= "elemento Bass">
+      <div class="imgMusica" id="containerBass">
+        <img class="imgPlayM" id="imgPlayBass" src="css/img/play_musica.png"
+        style="cursor: pointer;" onclick="togglePlayBass()">
+        </img>
+        <div class="sombra" id='txtBass'>
+          <p class="txtMusica"> "Night n' Bass"</p>
+          <p class="txtPeq"> Composición original </p>
+        </div>
+      </div>
+   </div>
+
     <div class= "elemento adaptacion">
-      <div class="imgMusica" >
+      <div class="imgMusica" id="containerSueno" >
       <img class="imgPdf" id="imgPdfSueno" style="cursor: pointer;" src="css/img/imgPdf.png"></img>
-    </div>
-      <div class="sombra">
+    <div class="sombra" id='txtSueno'>
         <p class="txtMusica"> "Sueño"</p>
         <p class="txtPeq"> Adaptación</p>
       </div>
     </div>
+    </div>
     <div class= "elemento insectos">
-      <div class="imgMusica" >
-        <img class="imgPdf" id="imgPdfCerebro" src="css/img/cerebro.png"></img>
-      </div>
-      <div class="sombra">
-        <p class="txtMusica"> Guión Original</p>
-        <p class="txtPeq"> (En proceso) </p>
+      <div class="imgMusica" id="containerInsec">
+        <img class="imgPdf" id="imgPdfInsec" src="css/img/cerebro.png"></img>
+        <div class="sombra" id='txtInsec'>
+          <p class="txtMusica"> Guión Original</p>
+          <p class="txtPeq"> (En proceso) </p>
+        </div>
       </div>
    </div>
-   <figure class= "elemento Genera">
-       <div class="sombra"> Genera</div>
-       <iframe class="video" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+
+ <div class= "elemento Temporales">
+    <div class="imgMusica" id="containerTemp" style="cursor: pointer;">
+      <div class="sombra" id='txtTemp'>
+        <p class="txtMusica"> "Temporales"</p>
+        <p class="txtPeq"> Cámara y Edición </p>
+      </div>
+    </div>
+ </div>
+ <div class= "elemento Tokio">
+    <div class="imgMusica" id="containerTokio" style="cursor: pointer;" onclick="PlayTokio()">
+      <div class="sombra" id='txtTokio'>
+        <p class="txtMusica"> "Tokio"</p>
+        <p class="txtPeq"> Dirección, Cámara y Edición </p>
+      </div>
+    </div>
+ </div>
+ <div class= "elemento Dic13">
+    <div class="imgMusica" id="containerDic13" style="cursor: pointer;" onclick="PlayDic13()">
+      <div class="sombra" id='txtDic13'>
+        <p class="txtMusica"> "Imaginación"</p>
+        <p class="txtPeq"> Dirección, Cámara y Edición </p>
+      </div>
+    </div>
+ </div>
+
+
+   <div class="elemento Genera">
+     <div id="containerGen">
+       <iframe class="videoGen" id="introGen" src="https://www.youtube.com/embed/QVzKaAV6BPo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
        </iframe>
-       <iframe class="video" src="https://www.youtube.com/embed/tgbNymZ7vqY">
-       </iframe></figure>
-   <figure class= "elemento Temporales">
-     <div class="sombra"> Temporales</div>
-     <iframe class="elem" src="https://www.youtube.com/embed/tgbNymZ7vqY">
-     </iframe></figure>
-   <figure class= "elemento noise">
-     <div class="sombra"> noise</div>
-     <iframe class="elem" src="https://www.youtube.com/embed/tgbNymZ7vqY">
-     </iframe></figure>
-   <figure class= "elemento dic13">
-       <div class="sombra"> dic13</div>
-       <iframe class="elem" src="https://www.youtube.com/embed/tgbNymZ7vqY">
-       </iframe>
-   </figure>
+    </div>
+    <div id="containerGen2">
+       <iframe class="videoGen" id="videoGen" src="https://www.youtube.com/embed/_yAN6LV13II" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+      </iframe>
+    </div>
+    <div class="sombra" id="txtGen">
+       <p class="txtMusica"> "Genera"</p>
+       <p class="txtPeq"> Animación, Música y Edición </p>
+    </div>
+   </div>
+
+     <div class= "elemento Noise">
+        <div class="imgMusica" id="containerNoise" style="cursor: pointer;" onclick="PlayNoise()">
+          <div class="sombra" id='txtNoise'>
+            <p class="txtMusica"> Teaser: Noise</p>
+            <p class="txtPeq"> Animación y Diseño </p>
+          </div>
+        </div>
+     </div>
+
+   <div class= "elemento diseño">
+       <div class="sombra" id='containerDisen'>
+         <p class="txtPeq"> Diseño y programación:</p>
+         <p class="txtMusica"> Jorge Amezcua </p>
+       </div>
+  </div>
+  <div class= "elemento ing">
+      <div class="sombra" id='containerIng'>
+        <p class="txtMusica"> Jorge Amezcua</p>
+        <p class="txtPeq"> <br>Ing. en Producción Musical Digital</p>
+        <p class="txtPeq"> Tec de Monterrey CCM </p>
+      </div>
+ </div>
+
+ <div class= "elemento contacto">
+    <div class="imgMusica" id="containerContacto">
+      <img class="imgPdf" id="imgMailContacto"  style="cursor: pointer;" src="css/img/mail.png"></img>
+      <div class="sombra" id='txtContac'>
+        <p class="txtMusica"> Contacto </p>
+      </div>
+    </div>
+</div>
 
 
     </div>

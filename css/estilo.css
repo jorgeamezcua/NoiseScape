@@ -1,7 +1,6 @@
 
 html{
   height:100%;
-  font-family: 'Anton', sans-serif;
 }
 
 @keyframes opacity_elem {
@@ -37,78 +36,68 @@ body{
   padding: 0;
   height:100%;
 }
-#imgApp{
-  width: 60%;
-  max-width: 650px;
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 5px;
-}
-.imgPlayM{
-  max-width: 85%;
-  max-height: 85%;
-  display: inline-flex;
-  margin-top: 3%;
-  margin-right: 5%;
 
-  border-radius: 5px;
-}
-.imgPdf{
-  max-width: 85%;
-  max-height: 85%;
-  display: inline-flex;
-  margin-top: 3%;
-  margin-left: 5%;
-  border-radius: 5px;
-}
 .imgMusica{
-  -ms-transform: scale(0.8, 0.8); /* IE 9 */
-  -webkit-transform: scale(0.8, 0.8); /* Safari */
-  transform: scale(0.8, 0.8);
-  height: 70%;
-  display: flex;
+  height:95%;
+  width:95%;
+  max-height:95%;
+  margin:10px;
   object-fit: contain;
   justify-content: center;
-  z-index: 5px;
+}
+/*-----IMAGENES y TXT general------*/
+.imgPlayM{
+  max-width: 95%;
+  max-height: 95%;
+  display: inline-flex;
+  border-radius: 5px;
+  align-self: center;
+}
+.imgPdf{
+  max-width: 95%;
+  max-height: 95%;
+  display: inline-flex;
+  align-self: center;
+  margin: 0 auto;
 }
 .txtMusica{
   text-align: center;
-  font-size: 120%;
+  font-size: 1em;
+  margin-top: 0;
+  margin-bottom: auto;
+}
+.txtMedio{
+  text-align: center;
+  font-size: 0.9em;
   margin-top: 0;
   margin-bottom: auto;
 }
 .txtPeq{
   text-align: center;
-  font-size: 100%;
+  font-size: 0.8em;
   margin-top: auto;
   margin-bottom: auto;
 }
-
-#imgPdfCerebro{
-  transform: scale(2);
-}
-
+/*---GRID general----*/
 .grid{
   width: 100%;
   height: 100%;
   display: grid;
   grid-template-columns: 20% 20% 20% 20% 20%;
-  grid-template-rows: 22% 22% 10% 22% 22% 22%;
+  grid-template-rows: 22% 22% 10% 22% 22%;
   grid-template-areas:
- "app       app    jazz  Temporales  Temporales "
- "app       app    solil    Temporales  Temporales "
- "zona1     zona2   zona3    zona4       zona5 "
- "noise    Genera  Genera   TOKIO       adaptacion "
- "noise    Genera  Genera   dic13       insectos "
- ".         .       .        .           . ";
+ "yoIng    yoIng    jazz     bass        contacto "
+ "app      Noise    solil    Temporales  adaptacion "
+ "zona1    zona2  zona3    zona4       zona5 "
+ "Genera   Genera Genera   Tokio       insectos "
+ "Genera   Genera Genera   dic13       diseño ";
 }
 
 .titulo_zona{
   color:white;
   font-family: 'Source Sans Pro';
   font-weight: bold;
-  font-size: 200%;;
+  font-size: 1.5vw;;
 }
 
 .zona{
@@ -124,16 +113,10 @@ body{
 }
 
 .sombra{
-  width: 95%;
-  height: 33%;
-  margin-top: auto;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 3px;
   color:white;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 1.5em;
-
+  align-self: center;
 }
 .elemento{
   margin:5px;
@@ -146,11 +129,7 @@ body{
   animation-fill-mode: forwards;
 }
 
-.video{
-  width: 100%;
-  height: 80%;
-}
-
+/*----CLASES PRINCIPALES---*/
 .zona1{
   grid-area: zona1;
   background-color: #f6000c;
@@ -174,14 +153,11 @@ body{
 .app{
   grid-area: app;
   background: rgba(0,154,143,0.4);
-}
-.Genera{
-  grid-area: Genera;
-  background: rgba(85,111,122,0.5);
-}
-.Temporales{
-  grid-area: Temporales;
-  background: rgba(0,154,143,0.25);
+  display: grid;
+  grid-template-rows: 50% 50%;
+  grid-template-areas: 'imgApp''txtApp';
+  grid-row-gap: 5px;
+  margin: 5px;
 }
 .adaptacion{
   grid-area: adaptacion;
@@ -191,46 +167,241 @@ body{
   grid-area: insectos;
   background: rgba(0,0,0,0.1);
 }
-.noise{
-  grid-area: noise;
-  background: rgba(246,0,12,0.2);
+.diseño{
+  grid-area: diseño;
+  /*background: rgba(0,0,0,0.1);*/
+  align-items: center;
+}
+.ing{
+  grid-area: yoIng;
+  /*background: rgba(0,0,0,0.1);*/
+  align-items: center;
+}
+.contacto{
+  grid-area: contacto;
+  /*background: rgba(0,0,0,0.1);*/
+}
+.Genera{
+  grid-area:Genera;
+  display:grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 20% 80%;
+  grid-template-areas: 'txtGen txtGen''introGen videoGen';
+  background: rgba(85,111,122,0.5);
+}
+.Noise{
+  grid-area: Noise;
+  background-image: url("img/imgNoise.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .solil{
   grid-area: solil;
+  background: rgba(251,109,0,0.3);
+}
+.Bass{
+  grid-area: bass;
   background: rgba(251,109,0,0.3);
 }
 .jazz{
   grid-area: jazz;
   background: rgba(251,109,0,0.3);
 }
-.dic13{
+.Temporales{
+  grid-area: Temporales;
+  background-image: url("img/imgTemporales.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.Dic13{
   grid-area: dic13;
-  background: rgba(0,154,143,0.25);
+  background-image: url("img/imgDic13.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.TOKIO{
-  grid-area: TOKIO;
-  background: rgba(0,154,143,0.25);
+.Tokio{
+  grid-area: Tokio;
+  background-image: url("img/imgTokio.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-/**---------Proyectos------------*/
 
-#NoiseScapeFrame{
+
+/*----CONTAINERS, IMG y TXT individuales-----*/
+#containerGen{
   width: 100%;
-  height: 100%;
-  zoom: 0.71;
-06.
--moz-transform: scale(0.71);
-07.
--moz-transform-origin: 0 0;
-08.
--o-transform: scale(0.71);
-09.
--o-transform-origin: 0 0;
-10.
--webkit-transform: scale(0.71);
-11.
--webkit-transform-origin: 0 0;
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  grid-area: introGen;
 }
+#containerGen iframe{
+  position: absolute;
+  top: 0;
+  right: 2%;
+  width: 95%;
+  height: 95%;
+  max-width: 837.59px;
+}
+#containerGen2{
+  width: 100%;
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  grid-area: videoGen;
+}
+#containerGen2 iframe{
+  position: absolute;
+  top: 0;
+  left:2%;
+  width: 95%;
+  height: 95%;
+  max-width: 837.59px;
+}
+
+#containerJ{
+  display: grid;
+  grid-template-rows: 61.8% 38.2%;
+  grid-template-areas: 'playJ pdfJ''txtJ txtJ';
+}
+#containerSol{
+  display: grid;
+  grid-template-rows: 61.8% 38.2%;
+  grid-template-areas: 'playSol pdfSol''txtSol txtSol';
+}
+#containerBass{
+  display: grid;
+  grid-template-rows: 61.8% 38.2%;
+  grid-template-areas: 'playBass''txtBass';
+}
+#containerTemp{
+  display: grid;
+  grid-template-rows: 61.8% 38.2%;
+  grid-template-areas: 'playTemp''txtTemp';
+}
+#containerTokio{
+  display: grid;
+  grid-template-rows: 61.8% 38.2%;
+  grid-template-areas: 'playTokio''txtTokio';
+}
+#containerDic13{
+  display: grid;
+  grid-template-rows: 61.8% 38.2%;
+  grid-template-areas: 'playDic13''txtDic13';
+}
+#containerNoise{
+  display: grid;
+  grid-template-rows: 61.8% 38.2%;
+  grid-template-areas: 'playNoise''txtNoise';
+}
+#containerSueno{
+  display: grid;
+  grid-template-rows: 61.8% 38.2%;
+  grid-template-areas: 'pdfSueno''txtSueno';
+}
+#containerInsec{
+  display: grid;
+  grid-template-rows: 61.8% 38.2%;
+  grid-template-areas: 'pdfInsec''txtInsec';
+}
+#containerIng{
+  height:95%;
+  width:95%;
+  max-height:95%;
+  margin:10px;
+  padding-top: 7%;
+  padding-bottom: 7%;
+}
+#containerDisen{
+  width:95%;
+  max-height:95%;
+  margin:10px;
+  padding-top: 50%;
+}
+#containerContacto{
+  display: grid;
+  grid-template-rows: 68% 32%;
+  grid-template-areas: 'imgContac''txtContac';
+}
+#imgApp{
+  width: auto;
+  height: auto;
+  max-height: 50%;
+  display: flex;
+  margin: 5px auto;
+  border-radius: 5px;
+  grid-area: imgApp;
+  background-image: url('img/imgNoiseScape.png');
+}
+#txtApp{
+  grid-area:txtApp;
+}
+#imgPlayJazz{
+  grid-area:playJ;
+}
+#imgPlaySolil{
+  grid-area:playSol;
+}
+#imgPlayBass{
+  grid-area:playBass;
+  margin:0 auto;
+}
+#imgPdfInsec{
+  grid-area: pdfInsec;
+}
+#txtSueno{
+  grid-area: txtSueno;
+}
+#txtInsec{
+  grid-area: txtInsec;
+}
+#imgPdfJazz{
+  grid-area: pdfJ;
+}
+#imgPdfSolil{
+  grid-area: pdfSol;
+}
+#txtJ{
+  grid-area: txtJ;
+}
+#txtSol{
+  grid-area: txtSol;
+}
+#txtBass{
+  grid-area: txtBass;
+}
+#txtTemp{
+  grid-area: txtTemp;
+}
+#txtTokio{
+  grid-area: txtTokio;
+}
+#txtDic13{
+  grid-area: txtDic13;
+}
+#txtNoise{
+  grid-area: txtNoise;
+}
+#imgMailContacto{
+  grid-area: imgContac;
+}
+#txtContac{
+  grid-area: txtContac;
+  align-self: baseline;
+}
+#txtGen{
+  grid-area: txtGen;
+  align-self: center;
+}
+
+/**---------Modal------------*/
 
 .modal {
   display: none; /* Hidden by default */
@@ -272,10 +443,13 @@ body{
   height: 100%;
   width:100%;
 }
+.embedVideo{
+  height: 100%;
+  width:100%;
+}
 span{
   display: none;
 }
-
 }/*Desktop*/
 
 @media (max-width:960px) { /*---------------------Móvil*/
