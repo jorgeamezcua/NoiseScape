@@ -60,6 +60,7 @@ var btnSol = document.getElementById("imgPdfSolil");
 var btnSueno = document.getElementById("imgPdfSueno");
 var btnContacto = document.getElementById("imgMailContacto");
 var btnApp = document.getElementById("containerApp");
+var btnNoise = document.getElementById("containerNoise");
 var btnTemp = document.getElementById("containerTemp");
 var btnTokio = document.getElementById("containerTokio");
 var btnDic13 = document.getElementById("containerDic13");
@@ -91,6 +92,18 @@ btnContacto.onclick = function() {
 btnApp.onclick = function() {
     modalApp.style.display = "block";
 }
+btnNoise.onclick = function() {
+    modalNoise.style.display = "block";
+  }
+btnTemp.onclick = function() {
+    modalTemp.style.display = "block";
+  }
+btnTokio.onclick = function() {
+    modalTokio.style.display = "block";
+  }
+btnDic13.onclick = function() {
+    modalDic13.style.display = "block";
+  }
 // When the user clicks on <span> (x), close the modal
 spanJ.onclick = function() {
     modalJ.style.display = "none";
@@ -112,12 +125,68 @@ window.onclick = function(event) {
     if (event.target == modalApp) {
         modalApp.style.display = "none";
     }
+    if (event.target == modalNoise) {
+        modalNoise.style.display = "none";
+    }
+    if (event.target == modalTemp) {
+        modalTemp.style.display = "none";
+    }
+    if (event.target == modalTokio) {
+        modalTokio.style.display = "none";
+    }
+    if (event.target == modalDic13) {
+        modalDic13.style.display = "none";
+    }
 }
 spanJ.onclick = function() {//lo dejo por si sí uso el tache
     modal.style.display = "none";
 }
-/*----Funciones Video----*/
+
+/*-----Modal Video-----*/
 
 
+/*----Permahover----*/
+$(".app").one("mouseover", function() {
+  $(this).addClass('permahover');
+});
+$(".jazz").one("mouseover", function() {
+  $(this).addClass('permahover');
+});
+$(".solil").one("mouseover", function() {
+  $(this).addClass('permahover');
+});
+$(".Bass").one("mouseover", function() {
+  $(this).addClass('permahover');
+});
+$(".adaptacion").one("mouseover", function() {
+  $(this).addClass('permahover');
+});
+$(".insectos").one("mouseover", function() {
+  $(this).addClass('permahover');
+});
+$(".Temporales").one("mouseover", function() {
+  $(this).addClass('permahover');
+});
+$(".Tokio").one("mouseover", function() {
+  $(this).addClass('permahover');
+});
+$(".Dic13").one("mouseover", function() {
+  $(this).addClass('permahover');
+});
+$(".Genera").one("mouseover", function() {
+  $(this).addClass('permahover');
+});
+$(".Noise").one("mouseover", function() {
+  $(this).addClass('permahover');
+});
+$(".ing").one("mouseover", function() {
+  $(this).addClass('permahover');
+});
+$(".diseño").one("mouseover", function() {
+  $(this).addClass('permahover');
+});
+$(".contacto").one("mouseover", function() {
+  $(this).addClass('permahover');
+});
 
 }

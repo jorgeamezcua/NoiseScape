@@ -30,7 +30,7 @@ html{
   animation-fill-mode: forwards;
 }
 
-@media (min-width:960px) {/*--------------------Desktop*/
+@media (min-width:0px) {/*--------------------Desktop*/
 body{
   margin: 0 auto;
   padding: 0;
@@ -38,10 +38,10 @@ body{
 }
 
 .imgMusica{
-  height:95%;
-  width:95%;
+  height:90%;
+  width:90%;
   max-height:95%;
-  margin:10px;
+  margin:5px;
   object-fit: contain;
   justify-content: center;
 }
@@ -68,7 +68,7 @@ body{
 }
 .txtMedio{
   text-align: center;
-  font-size: 0.9em;
+  font-size: 0.8em;
   margin-top: 0;
   margin-bottom: auto;
 }
@@ -115,7 +115,7 @@ body{
 .sombra{
   color:white;
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 1.5em;
+  font-size: 1.5vw;
   align-self: center;
 }
 .elemento{
@@ -123,7 +123,8 @@ body{
   opacity: 0;
   border-radius: 5px;
 }
-.elemento:hover{
+
+.permahover{
   animation-name: opacity;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
@@ -320,10 +321,15 @@ body{
   padding-bottom: 7%;
 }
 #containerDisen{
-  width:95%;
-  max-height:95%;
-  margin:10px;
-  padding-top: 50%;
+  display: grid;
+  grid-template-rows: 61.8% 38.2%;
+  grid-template-areas: 'imgDisen''txtDisen';
+}
+#txtDisen{
+  grid-area: txtDisen;
+}
+#imgDisen{
+  grid-area: imgDisen;
 }
 #containerContacto{
   display: grid;
@@ -404,14 +410,14 @@ body{
 /**---------Modal------------*/
 
 .modal {
-  display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+  display: none;
+    position: fixed;
+    z-index: 1;/
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
+    width: 100%;
+    height: 100%;
+    overflow: auto;
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
@@ -423,6 +429,23 @@ body{
     border: 1px solid #888;
     width: 80%; /* Could be more or less, depending on screen size */
     height: 80%;
+}
+.modal-video{
+    background-color: #fefefe;
+    margin: 5% auto;
+    position: relative;
+    width: 80%;
+    max-width: 1920px; 
+    height: 0;
+    padding-bottom: 56.25%;
+}
+.embedVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 }
 
 /* The Close Button */

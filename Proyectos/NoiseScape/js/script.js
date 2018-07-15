@@ -6,6 +6,18 @@ var lfo, lfofreq, lfoamp, filterQ;
 var sustainState;
 var oscArray = [];
 
+window.onload= function(){
+var modalInfo = document.getElementById('modalInfo');
+var btninfo = document.getElementById("btnInfo");
+  btnInfo.onclick = function() {
+    modalInfo.style.display = "block";
+  }
+  window.onclick = function(event) {
+      if (event.target == modalInfo) {
+          modalInfo.style.display = "none";
+      }
+  }
+}
 function setup() {
   octave = 0;
   octaveStr = "0"
