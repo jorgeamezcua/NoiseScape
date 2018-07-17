@@ -49,12 +49,14 @@ function togglePlayBass() {
 /*----Modal PDFs----*/
 window.onload = function(){
 
+var modalYo = document.getElementById('modalYo');
 var modalJ = document.getElementById('modalJazz');
 var modalSol = document.getElementById('modalSolil');
 var modalSueno = document.getElementById('modalSueno');
 var modalContacto = document.getElementById('modalContacto');
 var modalApp = document.getElementById('modalApp');
 var modalVideo = document.getElementById('modalVideo');
+var btnYo = document.getElementById("containerIng");
 var btnJ = document.getElementById("imgPdfJazz");
 var btnSol = document.getElementById("imgPdfSolil");
 var btnSueno = document.getElementById("imgPdfSueno");
@@ -69,14 +71,10 @@ var btnDic13 = document.getElementById("containerDic13");
 // Get the <span> element that closes the modal
 var spanJ = document.getElementsByClassName("close")[0];
 
-window.onclick = function(event) {
-  if (event.target == btnTemp) {
-      modalVideo.style.display = "block";
-  };
-  /*document.getElementById('embedVideo').src = "https://www.youtube.com/embed/ubvK5Z4ICJw";
-  */
+/*----Botones----*/
+btnYo.onclick = function() {
+    modalYo.style.display = "block";
 }
-/*----Botones PDFs----*/
 btnJ.onclick = function() {
     modalJ.style.display = "block";
 }
@@ -110,6 +108,9 @@ spanJ.onclick = function() {
 }
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
+  if (event.target == modalYo) {
+      modalYo.style.display = "none";
+  };
     if (event.target == modalJ) {
         modalJ.style.display = "none";
     };
@@ -142,51 +143,25 @@ spanJ.onclick = function() {//lo dejo por si sí uso el tache
     modal.style.display = "none";
 }
 
-/*-----Modal Video-----*/
-
-
 /*----Permahover----*/
-$(".app").one("mouseover", function() {
-  $(this).addClass('permahover');
+
+$(".animacion").one("mouseover", function() {
+  $('.animacion').addClass('permahover');
 });
-$(".jazz").one("mouseover", function() {
-  $(this).addClass('permahover');
+$(".audio").one("mouseover", function() {
+  $('.audio').addClass('permahover');
 });
-$(".solil").one("mouseover", function() {
-  $(this).addClass('permahover');
+$(".musica").one("mouseover", function() {
+  $('.musica').addClass('permahover');
 });
-$(".Bass").one("mouseover", function() {
-  $(this).addClass('permahover');
+$(".video").one("mouseover", function() {
+  $(".video").addClass('permahover');
 });
-$(".adaptacion").one("mouseover", function() {
-  $(this).addClass('permahover');
+$(".guion").one("mouseover", function() {
+  $('.guion').addClass('permahover');
 });
-$(".insectos").one("mouseover", function() {
-  $(this).addClass('permahover');
-});
-$(".Temporales").one("mouseover", function() {
-  $(this).addClass('permahover');
-});
-$(".Tokio").one("mouseover", function() {
-  $(this).addClass('permahover');
-});
-$(".Dic13").one("mouseover", function() {
-  $(this).addClass('permahover');
-});
-$(".Genera").one("mouseover", function() {
-  $(this).addClass('permahover');
-});
-$(".Noise").one("mouseover", function() {
-  $(this).addClass('permahover');
-});
-$(".ing").one("mouseover", function() {
-  $(this).addClass('permahover');
-});
-$(".diseño").one("mouseover", function() {
-  $(this).addClass('permahover');
-});
-$(".contacto").one("mouseover", function() {
-  $(this).addClass('permahover');
+$(".yo").one("mouseover", function() {
+  $('.yo').addClass('permahover');
 });
 
 }

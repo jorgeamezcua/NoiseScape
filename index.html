@@ -29,63 +29,7 @@
 <source src="Proyectos/Musica/DnB/DnB.mp3"></audio>
   <source src="Proyectos/Musica/DnB/DnB.ogg"></audio>
 
-    <div id="modalJazz" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <embed class="embedPDF" src="Proyectos/Musica/Excitement/Excitement_JorgeAmezcua.pdf"></embed>
-     </div>
-   </div>
-   <div id="modalSolil" class="modal">
-     <div class="modal-content">
-       <span class="close">&times;</span>
-       <embed class="embedPDF" src="Proyectos/Musica/Soliloquio/Soliloquio.pdf"></embed>
-    </div>
-  </div>
-  <div id="modalSueno" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <embed class="embedPDF" src="Proyectos/Guion/Sueno_adaptacion.pdf"></embed>
-   </div>
- </div>
- <div id="modalApp" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <embed class="embedApp" src="Proyectos/NoiseScape" width="100%" height="100%"></embed>
- </div>
-</div>
 
-<div id="modalContacto" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScjpJAEJI6U0pKgUK6hy50irymltAYDhxDWSlId_mRVFwdEHw/viewform?embedded=true" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0">Cargando...</iframe>
- </div>
-</div>
-<div id="modalNoise" class="modal">
-  <div class="modal-video">
-    <span class="close">&times;</span>
-    <iframe class="embedVideo" src="https://www.youtube.com//embed/cCb1HM0_CVs"frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
- </div>
-</div>
-<div id="modalTemp" class="modal">
-  <div class="modal-video">
-    <span class="close">&times;</span>
-    <iframe class="embedVideo" src="https://www.youtube.com/embed/ubvK5Z4ICJw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
-    </iframe>
- </div>
-</div>
-<div id="modalTokio" class="modal">
-  <div class="modal-video">
-    <span class="close">&times;</span>
-    <iframe class="embedVideo" src="https://www.youtube.com/embed/B8qGCgKWebI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
-    </iframe>
- </div>
-</div>
-<div id="modalDic13" class="modal">
-  <div class="modal-video">
-    <span class="close">&times;</span>
-    <iframe class="embedVideo" src="https://www.youtube.com/embed/f_n90a8xTfQ"frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
- </div>
-</div>
 
 <!--
  <iframe class="videoTemp" src="https://www.youtube.com/embed/ubvK5Z4ICJw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
@@ -99,32 +43,31 @@
     <div class="background">
     <div class="grid">
     <!--TITULOS-->
-      <div class="zona zona1">
+      <div class="zona zona1 audio">
         <p class="titulo_zona"> Audio </p>
       </div>
-      <div class="zona zona2">
+      <div class="zona zona2 animacion">
         <p class="titulo_zona"> Animación </p>
       </div>
-      <div class="zona zona3">
+      <div class="zona zona3 musica">
         <p class="titulo_zona"> Música </p>
       </div>
-      <div class="zona zona4">
+      <div class="zona zona4 video">
         <p class="titulo_zona"> Video </p>
       </div>
-      <div class="zona zona5">
+      <div class="zona zona5 guion">
         <p class="titulo_zona"> Guión </p>
       </div>
       <!--ELEMENTOS-->
-      <div class= "elemento app" id="containerApp" style="cursor: pointer;">
+      <div class= "elemento app audio" id="containerApp" style="cursor: pointer;">
             <img id="imgApp" src="css/img/imgNoiseScape.png"></img>
         <div class="sombra" id="txtApp">
           <p class="txtMusica"> NoiseScape web app </p>
-          <p class="txtMedio"> (Herramienta de diseño sonoro)</p>
           <p class="txtPeq">  Programación y diseño </p>
         </div>
       </div>
 
-      <div class= "elemento jazz">
+      <div class= "elemento jazz musica">
         <div class="imgMusica" id="containerJ">
           <img class="imgPlayM" id="imgPlayJazz" src="css/img/play_musica.png"
           style="cursor: pointer;" onclick="togglePlayJazz()">
@@ -137,7 +80,7 @@
         </div>
      </div>
 
-     <div class= "elemento solil">
+     <div class= "elemento solil musica">
        <div class="imgMusica" id="containerSol">
          <img class="imgPlayM" id="imgPlaySolil" src="css/img/play_musica.png"
          style="cursor: pointer;" onclick="togglePlaySolil()">
@@ -150,7 +93,7 @@
        </div>
     </div>
 
-    <div class= "elemento Bass">
+    <div class= "elemento Bass musica">
       <div class="imgMusica" id="containerBass">
         <img class="imgPlayM" id="imgPlayBass" src="css/img/play_musica.png"
         style="cursor: pointer;" onclick="togglePlayBass()">
@@ -162,7 +105,7 @@
       </div>
    </div>
 
-    <div class= "elemento adaptacion">
+    <div class= "elemento adaptacion guion">
       <div class="imgMusica" id="containerSueno" >
       <img class="imgPdf" id="imgPdfSueno" style="cursor: pointer;" src="css/img/imgPdf.png"></img>
     <div class="sombra" id='txtSueno'>
@@ -171,17 +114,17 @@
       </div>
     </div>
     </div>
-    <div class= "elemento insectos">
+    <div class= "elemento insectos guion">
       <div class="imgMusica" id="containerInsec">
-        <img class="imgPdf" id="imgPdfInsec" src="css/img/cerebro.png"></img>
+        <img class="imgPdf" id="imgPdfInsec" src="css/img/reloj.png"></img>
         <div class="sombra" id='txtInsec'>
           <p class="txtMusica"> Guión Original</p>
-          <p class="txtPeq"> (En proceso) </p>
+          <p class="txtPeq"> (En registro) </p>
         </div>
       </div>
    </div>
 
- <div class= "elemento Temporales">
+ <div class= "elemento Temporales video">
     <div class="imgMusica" id="containerTemp" style="cursor: pointer;">
       <div class="sombra" id='txtTemp'>
         <p class="txtMusica"> "Temporales"</p>
@@ -189,7 +132,7 @@
       </div>
     </div>
  </div>
- <div class= "elemento Tokio">
+ <div class= "elemento Tokio video">
     <div class="imgMusica" id="containerTokio" style="cursor: pointer;" onclick="PlayTokio()">
       <div class="sombra" id='txtTokio'>
         <p class="txtMusica"> "Tokio"</p>
@@ -197,7 +140,7 @@
       </div>
     </div>
  </div>
- <div class= "elemento Dic13">
+ <div class= "elemento Dic13 video">
     <div class="imgMusica" id="containerDic13" style="cursor: pointer;" onclick="PlayDic13()">
       <div class="sombra" id='txtDic13'>
         <p class="txtMusica"> "Imaginación"</p>
@@ -207,7 +150,7 @@
  </div>
 
 
-   <div class="elemento Genera">
+   <div class="elemento Genera animacion">
      <div id="containerGen">
        <iframe class="videoGen" id="introGen" src="https://www.youtube.com/embed/QVzKaAV6BPo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
        </iframe>
@@ -222,7 +165,7 @@
     </div>
    </div>
 
-     <div class= "elemento Noise">
+     <div class= "elemento Noise animacion">
         <div class="imgMusica" id="containerNoise" style="cursor: pointer;" onclick="PlayNoise()">
           <div class="sombra" id='txtNoise'>
             <p class="txtMusica"> Teaser: Noise</p>
@@ -231,7 +174,7 @@
         </div>
      </div>
 
- <div class= "elemento ing">
+ <div class= "elemento ing yo">
       <div class="sombra" id='containerIng'>
         <p class="txtMusica"> Jorge Amezcua</p>
         <p class="txtPeq"> <br>Ing. en Producción Musical Digital</p>
@@ -239,7 +182,7 @@
       </div>
  </div>
 
- <div class= "elemento diseño">
+ <div class= "elemento diseño yo">
    <div class="imgMusica" id='containerDisen'>
      <img class="imgPdf" id="imgDisen" src="css/img/imgDisen.png"></img>
      <div class="sombra" id="txtDisen">
@@ -249,7 +192,7 @@
    </div>
  </div>
 
- <div class= "elemento contacto">
+ <div class= "elemento contacto yo">
     <div class="imgMusica" id="containerContacto">
       <img class="imgPdf" id="imgMailContacto"  style="cursor: pointer;" src="css/img/mail.png"></img>
       <div class="sombra" id='txtContac'>
@@ -261,5 +204,70 @@
 
     </div>
     </div>
+
+    <div id="modalYo" class="modal">
+      <div class="modal-video">
+        <span class="close">&times;</span>
+        <iframe class="embedVideo" src="https://www.youtube.com//embed/cCb1HM0_CVs"frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+     </div>
+    </div>
+    <div id="modalJazz" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <embed class="embedPDF" src="Proyectos/Musica/Excitement/Excitement_JorgeAmezcua.pdf"></embed>
+     </div>
+    </div>
+    <div id="modalSolil" class="modal">
+     <div class="modal-content">
+       <span class="close">&times;</span>
+       <embed class="embedPDF" src="Proyectos/Musica/Soliloquio/Soliloquio.pdf"></embed>
+    </div>
+    </div>
+    <div id="modalSueno" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <embed class="embedPDF" src="Proyectos/Guion/Sueno_adaptacion.pdf"></embed>
+    </div>
+    </div>
+    <div id="modalApp" class="modal">
+    <div class="modal-content">
+    <span class="close">&times;</span>
+    <embed class="embedApp" src="Proyectos/NoiseScape" width="100%" height="100%"></embed>
+    </div>
+    </div>
+
+    <div id="modalContacto" class="modal">
+    <div class="modal-content">
+    <span class="close">&times;</span>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScjpJAEJI6U0pKgUK6hy50irymltAYDhxDWSlId_mRVFwdEHw/viewform?embedded=true" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0">Cargando...</iframe>
+    </div>
+    </div>
+    <div id="modalNoise" class="modal">
+    <div class="modal-video">
+    <span class="close">&times;</span>
+    <iframe class="embedVideo" src="https://www.youtube.com//embed/cCb1HM0_CVs"frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+    </div>
+    <div id="modalTemp" class="modal">
+    <div class="modal-video">
+    <span class="close">&times;</span>
+    <iframe class="embedVideo" src="https://www.youtube.com/embed/ubvK5Z4ICJw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+    </iframe>
+    </div>
+    </div>
+    <div id="modalTokio" class="modal">
+    <div class="modal-video">
+    <span class="close">&times;</span>
+    <iframe class="embedVideo" src="https://www.youtube.com/embed/B8qGCgKWebI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+    </iframe>
+    </div>
+    </div>
+    <div id="modalDic13" class="modal">
+    <div class="modal-video">
+    <span class="close">&times;</span>
+    <iframe class="embedVideo" src="https://www.youtube.com/embed/f_n90a8xTfQ"frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+    </div>
+
   </body>
 </html>
