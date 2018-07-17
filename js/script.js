@@ -73,7 +73,7 @@ var spanJ = document.getElementsByClassName("close")[0];
 
 /*----Botones----*/
 btnYo.onclick = function() {
-    modalYo.style.display = "block";
+    //modalYo.style.display = "block";
 }
 btnJ.onclick = function() {
     modalJ.style.display = "block";
