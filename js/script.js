@@ -72,11 +72,11 @@ var btnDic13 = document.getElementById("containerDic13");
 var spanJ = document.getElementsByClassName("close")[0];
 
 /*----Botones----*/
-btnYo.onclick = function() {
-  var iframe = document.getElementById("iframeNoise");
+/*btnYo.onclick = function() {
+  var iframe = document.getElementById("iframeYo");
   iframe.setAttribute( "src", "https://www.youtube.com//embed/cCb1HM0_CVs?rel=0&showinfo=0&autoplay=1" );
     modalYo.style.display = "block";
-}
+}*/
 btnJ.onclick = function() {
     modalJ.style.display = "block";
 }
