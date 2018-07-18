@@ -73,7 +73,9 @@ var spanJ = document.getElementsByClassName("close")[0];
 
 /*----Botones----*/
 btnYo.onclick = function() {
-    //modalYo.style.display = "block";
+  var iframe = document.getElementById("iframeNoise");
+  iframe.setAttribute( "src", "https://www.youtube.com//embed/cCb1HM0_CVs?rel=0&showinfo=0&autoplay=1" );
+    modalYo.style.display = "block";
 }
 btnJ.onclick = function() {
     modalJ.style.display = "block";
@@ -91,15 +93,23 @@ btnApp.onclick = function() {
     modalApp.style.display = "block";
 }
 btnNoise.onclick = function() {
+  var iframe = document.getElementById("iframeNoise");
+  iframe.setAttribute( "src", "https://www.youtube.com//embed/cCb1HM0_CVs?rel=0&showinfo=0&autoplay=1" );
     modalNoise.style.display = "block";
   }
 btnTemp.onclick = function() {
+  var iframe = document.getElementById("iframeTemp");
+  iframe.setAttribute( "src", "https://www.youtube.com//embed/ubvK5Z4ICJw?rel=0&showinfo=0&autoplay=1" );
     modalTemp.style.display = "block";
   }
 btnTokio.onclick = function() {
+  var iframe = document.getElementById("iframeTokio");
+  iframe.setAttribute( "src", "https://www.youtube.com//embed/B8qGCgKWebI?rel=0&showinfo=0&autoplay=1" );
     modalTokio.style.display = "block";
   }
 btnDic13.onclick = function() {
+  var iframe = document.getElementById("iframeDic13");
+  iframe.setAttribute( "src", "https://www.youtube.com//embed/f_n90a8xTfQ?rel=0&showinfo=0&autoplay=1" );
     modalDic13.style.display = "block";
   }
 // When the user clicks on <span> (x), close the modal
