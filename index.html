@@ -13,7 +13,8 @@
 
     <title>Jorge Amezcua</title>
 
-    <link href="css/desktop.css" rel="stylesheet">
+    <link rel="stylesheet" media='screen and (min-width: 961px)'href="css/desktop.css">
+    <link rel="stylesheet" media='screen and (max-width: 960px)'href="css/movil.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro|Work+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
   </head>
@@ -29,44 +30,66 @@
 <source src="Proyectos/Musica/DnB/DnB.mp3"></audio>
   <source src="Proyectos/Musica/DnB/DnB.ogg"></audio>
 
-
-
-<!--
- <iframe class="videoTemp" src="https://www.youtube.com/embed/ubvK5Z4ICJw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
- </iframe>
- <iframe class="videoTemp" src="https://www.po?ube.com/embed/ubvK5Z4ICJw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
- </iframe>
- <iframe class="noise" src="https://www.po?ube.com/embed/tgbNymZ7vqY">
- </iframe>
--->
-
     <div class="background">
-    <div class="grid">
+    <div class="grid flexbox">
+
+      <div class= "elementoCh ing yo">
+          <div class="sombra" id='containerIng'>
+            <p class="txtMusica"> Jorge Amezcua</p>
+            <p class="txtPeq"> <br>Ing. en Producción Musical Digital</p>
+            <p class="txtPeq"> Tec de Monterrey CCM </p>
+          </div>
+      </div>
+      <div class= "elementoCh contacto yo">
+        <div class="imgMusica" id="containerContacto">
+          <img class="imgPdf" id="imgMailContacto"  style="cursor: pointer;" src="css/img/mail.png"></img>
+          <div class="sombra" id='txtContac'>
+            <p class="txtMusica"> Contacto </p>
+          </div>
+        </div>
+      </div>
     <!--TITULOS-->
       <div class="zona zona1 audio">
         <p class="titulo_zona"> Audio </p>
       </div>
-      <div class="zona zona2 animacion">
-        <p class="titulo_zona"> Animación </p>
-      </div>
-      <div class="zona zona3 musica">
-        <p class="titulo_zona"> Música </p>
-      </div>
-      <div class="zona zona4 video">
-        <p class="titulo_zona"> Video </p>
-      </div>
-      <div class="zona zona5 guion">
-        <p class="titulo_zona"> Guión </p>
-      </div>
-      <!--ELEMENTOS-->
-      <div class= "elemento app audio" id="containerApp" style="cursor: pointer;">
-            <img id="imgApp" src="css/img/imgNoiseScape.png"></img>
-        <div class="sombra" id="txtApp">
-          <p class="txtMusica"> NoiseScape web app </p>
-          <p class="txtPeq">  Programación y diseño </p>
+      <div class= "elemento app audio">
+        <div class="imgMusica" id="containerApp" style="cursor: pointer;">
+          <div class="sombra" id="txtApp">
+            <p class="txtMusica"> NoiseScape web app </p>
+            <p class="txtPeq">  Programación y diseño </p>
+          </div>
         </div>
       </div>
 
+
+      <div class="zona zona2 animacion">
+        <p class="titulo_zona"> Animación </p>
+      </div>
+      <div class= "elemento Noise animacion">
+         <div class="imgMusica" id="containerNoise" style="cursor: pointer;">
+           <div class="sombra" id='txtNoise'>
+             <p class="txtMusica"> Teaser: Noise</p>
+             <p class="txtPeq"> Animación y Diseño </p>
+           </div>
+         </div>
+      </div>
+      <div class="elemento Genera animacion">
+        <div class="" id="containerGen">
+          <div class="imgMusica" id="containerGenIntro"  style="cursor: pointer;">
+          </div>
+          <div class="imgMusica" id="containerGenVid" style="cursor: pointer;">
+          </div>
+          <div class="sombra" id="txtGen">
+             <p class="txtMusica"> "Genera"</p>
+             <p class="txtPeq"> Animación, Música y Edición </p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="zona zona3 musica">
+        <p class="titulo_zona"> Música </p>
+      </div>
       <div class= "elemento jazz musica">
         <div class="imgMusica" id="containerJ">
           <img class="imgPlayM" id="imgPlayJazz" src="css/img/play_musica.png"
@@ -78,9 +101,8 @@
           <p class="txtPeq"> Composición original </p>
         </div>
         </div>
-     </div>
-
-     <div class= "elemento solil musica">
+      </div>
+      <div class= "elemento solil musica">
        <div class="imgMusica" id="containerSol">
          <img class="imgPlayM" id="imgPlaySolil" src="css/img/play_musica.png"
          style="cursor: pointer;" onclick="togglePlaySolil()">
@@ -91,9 +113,8 @@
            <p class="txtPeq"> Arreglo orquestal </p>
         </div>
        </div>
-    </div>
-
-    <div class= "elemento Bass musica">
+      </div>
+      <div class= "elemento Bass musica">
       <div class="imgMusica" id="containerBass">
         <img class="imgPlayM" id="imgPlayBass" src="css/img/play_musica.png"
         style="cursor: pointer;" onclick="togglePlayBass()">
@@ -103,86 +124,61 @@
           <p class="txtPeq"> Composición original </p>
         </div>
       </div>
-   </div>
-
-    <div class= "elemento adaptacion guion">
-      <div class="imgMusica" id="containerSueno" >
-      <img class="imgPdf" id="imgPdfSueno" style="cursor: pointer;" src="css/img/imgPdf.png"></img>
-    <div class="sombra" id='txtSueno'>
-        <p class="txtMusica"> "Sueño"</p>
-        <p class="txtPeq"> Adaptación</p>
       </div>
-    </div>
-    </div>
-    <div class= "elemento insectos guion">
-      <div class="imgMusica" id="containerInsec">
-        <img class="imgPdf" id="imgPdfInsec" src="css/img/reloj.png"></img>
-        <div class="sombra" id='txtInsec'>
-          <p class="txtMusica"> Guión Original</p>
-          <p class="txtPeq"> (En registro) </p>
+
+
+      <div class="zona zona4 video">
+        <p class="titulo_zona"> Video </p>
+      </div>
+      <div class= "elemento Temporales video">
+         <div class="imgMusica" id="containerTemp" style="cursor: pointer;">
+           <div class="sombra" id='txtTemp'>
+             <p class="txtMusica"> "Temporales"</p>
+             <p class="txtPeq"> Cámara y Edición </p>
+           </div>
+         </div>
+      </div>
+      <div class= "elemento Tokio video">
+         <div class="imgMusica" id="containerTokio" style="cursor: pointer;">
+           <div class="sombra" id='txtTokio'>
+             <p class="txtMusica"> "Tokio"</p>
+             <p class="txtPeq"> Dirección, Cámara y Edición </p>
+           </div>
+         </div>
+      </div>
+      <div class= "elemento Dic13 video">
+         <div class="imgMusica" id="containerDic13" style="cursor: pointer;">
+           <div class="sombra" id='txtDic13'>
+             <p class="txtMusica"> "Imaginación"</p>
+             <p class="txtPeq"> Dirección, Cámara y Edición </p>
+           </div>
+         </div>
+      </div>
+
+
+      <div class="zona zona5 guion">
+        <p class="titulo_zona"> Guión </p>
+      </div>
+      <div class= "elemento adaptacion guion">
+        <div class="imgMusica" id="containerSueno" >
+        <img class="imgPdf" id="imgPdfSueno" style="cursor: pointer;" src="css/img/imgPdf.png"></img>
+      <div class="sombra" id='txtSueno'>
+          <p class="txtMusica"> "Sueño"</p>
+          <p class="txtPeq"> Adaptación</p>
         </div>
       </div>
-   </div>
-
- <div class= "elemento Temporales video">
-    <div class="imgMusica" id="containerTemp" style="cursor: pointer;">
-      <div class="sombra" id='txtTemp'>
-        <p class="txtMusica"> "Temporales"</p>
-        <p class="txtPeq"> Cámara y Edición </p>
       </div>
-    </div>
- </div>
- <div class= "elemento Tokio video">
-    <div class="imgMusica" id="containerTokio" style="cursor: pointer;" onclick="PlayTokio()">
-      <div class="sombra" id='txtTokio'>
-        <p class="txtMusica"> "Tokio"</p>
-        <p class="txtPeq"> Dirección, Cámara y Edición </p>
-      </div>
-    </div>
- </div>
- <div class= "elemento Dic13 video">
-    <div class="imgMusica" id="containerDic13" style="cursor: pointer;" onclick="PlayDic13()">
-      <div class="sombra" id='txtDic13'>
-        <p class="txtMusica"> "Imaginación"</p>
-        <p class="txtPeq"> Dirección, Cámara y Edición </p>
-      </div>
-    </div>
- </div>
-
-
-   <div class="elemento Genera animacion">
-     <div id="containerGen">
-       <iframe class="videoGen" id="introGen" src="https://www.youtube.com/embed/QVzKaAV6BPo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
-       </iframe>
-    </div>
-    <div id="containerGen2">
-       <iframe class="videoGen" id="videoGen" src="https://www.youtube.com/embed/_yAN6LV13II" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
-      </iframe>
-    </div>
-    <div class="sombra" id="txtGen">
-       <p class="txtMusica"> "Genera"</p>
-       <p class="txtPeq"> Animación, Música y Edición </p>
-    </div>
-   </div>
-
-     <div class= "elemento Noise animacion">
-        <div class="imgMusica" id="containerNoise" style="cursor: pointer;" onclick="PlayNoise()">
-          <div class="sombra" id='txtNoise'>
-            <p class="txtMusica"> Teaser: Noise</p>
-            <p class="txtPeq"> Animación y Diseño </p>
+      <div class= "elemento insectos guion">
+        <div class="imgMusica" id="containerInsec">
+          <img class="imgPdf" id="imgPdfInsec" src="css/img/reloj.png"></img>
+          <div class="sombra" id='txtInsec'>
+            <p class="txtMusica"> Guión Original</p>
+            <p class="txtPeq"> (En registro) </p>
           </div>
         </div>
-     </div>
+   </div>
 
- <div class= "elemento ing yo">
-      <div class="sombra" id='containerIng'>
-        <p class="txtMusica"> Jorge Amezcua</p>
-        <p class="txtPeq"> <br>Ing. en Producción Musical Digital</p>
-        <p class="txtPeq"> Tec de Monterrey CCM </p>
-      </div>
- </div>
-
- <div class= "elemento diseño yo">
+ <div class= "elementoCh diseño yo">
    <div class="imgMusica" id='containerDisen'>
      <img class="imgPdf" id="imgDisen" src="css/img/imgDisen.png"></img>
      <div class="sombra" id="txtDisen">
@@ -191,17 +187,6 @@
      </div>
    </div>
  </div>
-
- <div class= "elemento contacto yo">
-    <div class="imgMusica" id="containerContacto">
-      <img class="imgPdf" id="imgMailContacto"  style="cursor: pointer;" src="css/img/mail.png"></img>
-      <div class="sombra" id='txtContac'>
-        <p class="txtMusica"> Contacto </p>
-      </div>
-    </div>
-</div>
-
-
     </div>
     </div>
 
@@ -266,6 +251,18 @@
     <div class="modal-video">
     <span class="close">&times;</span>
     <iframe class="embedVideo" id="iframeDic13" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+    </div>
+    <div id="modalGen" class="modal">
+    <div class="modal-video">
+    <span class="close">&times;</span>
+    <iframe class="embedVideo" id="iframeGen" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+    </div>
+    <div id="modalGen2" class="modal">
+    <div class="modal-video">
+    <span class="close">&times;</span>
+    <iframe class="embedVideo" id="iframeGen2" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </div>
     </div>
 

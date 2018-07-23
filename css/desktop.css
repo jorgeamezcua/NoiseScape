@@ -2,7 +2,6 @@
 html{
   height:100%;
 }
-
 @keyframes opacityZonas {
     0% {opacity: 0;}
     25% {opacity: 0;}
@@ -30,7 +29,6 @@ html{
   animation-fill-mode: forwards;
 }
 
-@media (min-width:0px) {/*--------------------Desktop*/
 body{
   margin: 0 auto;
   padding: 0;
@@ -39,7 +37,6 @@ body{
 
 .imgMusica{
   height:90%;
-  width:90%;
   max-height:95%;
   margin:5px;
   object-fit: contain;
@@ -52,13 +49,14 @@ body{
   display: inline-flex;
   border-radius: 5px;
   align-self: center;
+  justify-self: center;
 }
 .imgPdf{
   max-width: 95%;
   max-height: 95%;
   display: inline-flex;
   align-self: center;
-  margin: 0 auto;
+  justify-self: center;
 }
 .txtMusica{
   text-align: center;
@@ -131,11 +129,12 @@ body{
   font-size: 1.5vw;
   align-self: center;
 }
-.elemento{
+.elemento, .elementoCh{
   margin:5px;
   opacity: 0;
   border-radius: 5px;
 }
+
 
 .permahover{
   animation-name: opacity;
@@ -164,11 +163,6 @@ body{
   grid-area: zona5;
   background-color: #cff09e;
 }
-.app{
-  grid-area: app;
-  background: rgba(0,154,143,0.4);
-
-}
 .ing{
   cursor: pointer;
 }
@@ -196,11 +190,21 @@ body{
 }
 .Genera{
   grid-area:Genera;
+  background: rgba(85,111,122,0.5);
+}
+#containerGen{
+  height: 100%;
   display:grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: 20% 80%;
   grid-template-areas: 'txtGen txtGen''introGen videoGen';
-  background: rgba(85,111,122,0.5);
+}
+.app{
+  grid-area: app;
+  background-image: url('img/imgNoiseScape.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .Noise{
   grid-area: Noise;
@@ -246,37 +250,20 @@ body{
 
 
 /*----CONTAINERS, IMG y TXT individuales-----*/
-#containerGen{
-  width: 100%;
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
+
+#containerGenIntro{
+  background-image: url("img/imgGen.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
   grid-area: introGen;
 }
-#containerGen iframe{
-  position: absolute;
-  top: 0;
-  right: 2%;
-  width: 95%;
-  height: 95%;
-  max-width: 837.59px;
-}
-#containerGen2{
-  width: 100%;
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
+#containerGenVid{
+  background-image: url("img/imgLeds.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
   grid-area: videoGen;
-}
-#containerGen2 iframe{
-  position: absolute;
-  top: 0;
-  left:2%;
-  width: 95%;
-  height: 95%;
-  max-width: 837.59px;
 }
 
 #containerJ{
@@ -308,6 +295,11 @@ body{
   display: grid;
   grid-template-rows: 61.8% 38.2%;
   grid-template-areas: 'playDic13''txtDic13';
+}
+#containerApp{
+  display: grid;
+  grid-template-rows: 61.8% 38.2%;
+  grid-template-areas: 'imgApp''txtApp';
 }
 #containerNoise{
   display: grid;
@@ -348,29 +340,8 @@ body{
   grid-template-rows: 68% 32%;
   grid-template-areas: 'imgContac''txtContac';
 }
-#containerApp{
-  /*display: grid;
-  grid-template-rows: 50% 50%;
-  grid-template-areas: 'imgApp''txtApp';
-  grid-row-gap: 5px;*/
-}
-#imgApp{
-  height: 50%;
-  max-width: 100%;
-  display: flex;
-  margin: 5px auto;
-  border-radius: 5px;
-  grid-area: imgApp;
-  background-image: url('img/imgNoiseScape.png');
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 #txtApp{
-  /*grid-area:txtApp;*/
-  max-height: 50%;
-  position: relative;
-  top: 5px;
+  grid-area:txtApp;
 }
 #imgPlayJazz{
   grid-area:playJ;
@@ -506,6 +477,3 @@ iframe{
 span{
   display: none;
 }
-}/*Desktop*/
-/*
-@media (max-width:960px) {} /*---------------------Móvil*/

@@ -66,7 +66,8 @@ var btnNoise = document.getElementById("containerNoise");
 var btnTemp = document.getElementById("containerTemp");
 var btnTokio = document.getElementById("containerTokio");
 var btnDic13 = document.getElementById("containerDic13");
-
+var btnGen = document.getElementById("containerGenIntro");
+var btnGen2 = document.getElementById("containerGenVid");
 
 // Get the <span> element that closes the modal
 var spanJ = document.getElementsByClassName("close")[0];
@@ -94,24 +95,35 @@ btnApp.onclick = function() {
 }
 btnNoise.onclick = function() {
   var iframe = document.getElementById("iframeNoise");
-  iframe.setAttribute( "src", "https://www.youtube.com//embed/cCb1HM0_CVs?rel=0&showinfo=0&autoplay=1" );
+  iframe.setAttribute( "src", "https://www.youtube.com//embed/cCb1HM0_CVs?rel=0&showinfo=0&" );
     modalNoise.style.display = "block";
   }
 btnTemp.onclick = function() {
   var iframe = document.getElementById("iframeTemp");
-  iframe.setAttribute( "src", "https://www.youtube.com//embed/ubvK5Z4ICJw?rel=0&showinfo=0&autoplay=1" );
+  iframe.setAttribute( "src", "https://www.youtube.com//embed/ubvK5Z4ICJw?rel=0&showinfo=0&" );
     modalTemp.style.display = "block";
   }
 btnTokio.onclick = function() {
   var iframe = document.getElementById("iframeTokio");
-  iframe.setAttribute( "src", "https://www.youtube.com//embed/B8qGCgKWebI?rel=0&showinfo=0&autoplay=1" );
+  iframe.setAttribute( "src", "https://www.youtube.com//embed/B8qGCgKWebI?rel=0&showinfo=0&" );
     modalTokio.style.display = "block";
   }
 btnDic13.onclick = function() {
   var iframe = document.getElementById("iframeDic13");
-  iframe.setAttribute( "src", "https://www.youtube.com//embed/f_n90a8xTfQ?rel=0&showinfo=0&autoplay=1" );
+  iframe.setAttribute( "src", "https://www.youtube.com//embed/f_n90a8xTfQ?rel=0&showinfo=" );
     modalDic13.style.display = "block";
   }
+btnGen.onclick = function() {
+  var iframe = document.getElementById("iframeGen");
+  iframe.setAttribute( "src", "https://www.youtube.com/embed/QVzKaAV6BPo?rel=0&showinfo=" );
+    modalGen.style.display = "block";
+  }
+btnGen2.onclick = function() {
+var iframe = document.getElementById("iframeGen2");
+iframe.setAttribute( "src", "https://www.youtube.com/embed/_yAN6LV13II?rel=0&showinfo=" );
+  modalGen2.style.display = "block";
+  }
+
 // When the user clicks on <span> (x), close the modal
 spanJ.onclick = function() {
     modalJ.style.display = "none";
@@ -148,30 +160,40 @@ window.onclick = function(event) {
     if (event.target == modalDic13) {
         modalDic13.style.display = "none";
     }
+    if (event.target == modalGen) {
+        modalGen.style.display = "none";
+    }
+    if (event.target == modalGen2) {
+        modalGen2.style.display = "none";
+    }
 }
 spanJ.onclick = function() {//lo dejo por si sí uso el tache
     modal.style.display = "none";
-}
+  }
 
-/*----Permahover----*/
-
-$(".animacion").one("mouseover", function() {
-  $('.animacion').addClass('permahover');
-});
-$(".audio").one("mouseover", function() {
-  $('.audio').addClass('permahover');
-});
-$(".musica").one("mouseover", function() {
-  $('.musica').addClass('permahover');
-});
-$(".video").one("mouseover", function() {
-  $(".video").addClass('permahover');
-});
-$(".guion").one("mouseover", function() {
-  $('.guion').addClass('permahover');
-});
-$(".yo").one("mouseover", function() {
-  $('.yo').addClass('permahover');
-});
-
+function WidthChange(mq) {
+  if (mq.matches){
+    $(".animacion").one("mouseover", function() {
+      $('.animacion').addClass('permahover');
+    });
+    $(".audio").one("mouseover", function() {
+      $('.audio').addClass('permahover');
+    });
+    $(".musica").one("mouseover", function() {
+      $('.musica').addClass('permahover');
+    });
+    $(".video").one("mouseover", function() {
+      $(".video").addClass('permahover');
+    });
+    $(".guion").one("mouseover", function() {
+      $('.guion').addClass('permahover');
+    });
+    $(".yo").one("mouseover", function() {
+      $('.yo').addClass('permahover');
+    });
+  } else{};
+  }
+var mq = window.matchMedia('(min-width:960px)');
+    mq.addListener(WidthChange);
+    WidthChange(mq);
 }
