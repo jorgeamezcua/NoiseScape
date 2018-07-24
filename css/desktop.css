@@ -36,9 +36,10 @@ body{
 }
 
 .imgMusica{
+  width: 90%;
   height:90%;
   max-height:95%;
-  margin:5px;
+  margin:5px auto;
   object-fit: contain;
   justify-content: center;
 }
@@ -96,21 +97,6 @@ body{
   font-weight: bold;
   font-size: 1.5vw;
 }
-.zona1{
-  color:#2eb6b4;
-}
-.zona2{
-  color:#82cb92;
-}
-.zona3{
-  color:#0f5a58;
-}
-.zona4{
-  color:#0a3637;
-}
-.zona5{
-  color:#09282a;
-}
 .zona{
   width: 100%;
   height: 100%;
@@ -122,7 +108,6 @@ body{
   animation-fill-mode: forwards;
   grid-row:4;
 }
-
 .sombra{
   color:white;
   font-family: 'Source Sans Pro', sans-serif;
@@ -134,8 +119,6 @@ body{
   opacity: 0;
   border-radius: 5px;
 }
-
-
 .permahover{
   animation-name: opacity;
   animation-duration: 0.5s;
@@ -145,23 +128,28 @@ body{
 /*----CLASES PRINCIPALES---*/
 .zona1{
   grid-area: zona1;
-  background-color: #0b476a;
+  background-color: #00668d;
+  color:#02b6fb;
 }
 .zona2{
   grid-area: zona2;
-  background-color: #3b8685;
+  background-color: #008469;
+  color:#27cead;
 }
 .zona3{
   grid-area: zona3;
-  background-color: #78bd9a;
+  background-color: #529f32;
+  color:#89e93d;
 }
 .zona4{
   grid-area: zona4;
-  background-color: #a8dca8;
+  background-color: #8ab925;
+  color:#4c6f00;
 }
 .zona5{
   grid-area: zona5;
-  background-color: #cff09e;
+  background-color: #c1d029;
+  color:#768100;
 }
 .ing{
   cursor: pointer;
@@ -250,7 +238,7 @@ body{
 
 
 /*----CONTAINERS, IMG y TXT individuales-----*/
-
+#headerMovil{display: none;}
 #containerGenIntro{
   background-image: url("img/imgGen.jpg");
   background-position: center center;
@@ -355,6 +343,9 @@ body{
 }
 #imgPdfInsec{
   grid-area: pdfInsec;
+}
+#imgPdfSueno{
+  grid-area: pdfSueno;
 }
 #txtSueno{
   grid-area: txtSueno;

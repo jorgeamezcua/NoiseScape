@@ -147,34 +147,34 @@ window.onclick = function(event) {
     };
     if (event.target == modalSueno) {
         modalSueno.style.display = "none";
-    }
+    };
     if (event.target == modalInsec) {
         modalInsec.style.display = "none";
-    }
+    };
     if (event.target == modalContacto) {
         modalContacto.style.display = "none";
-    }
+    };
     if (event.target == modalApp) {
         modalApp.style.display = "none";
-    }
+    };
     if (event.target == modalNoise) {
         modalNoise.style.display = "none";
-    }
+    };
     if (event.target == modalTemp) {
         modalTemp.style.display = "none";
-    }
+    };
     if (event.target == modalTokio) {
         modalTokio.style.display = "none";
-    }
+    };
     if (event.target == modalDic13) {
         modalDic13.style.display = "none";
-    }
+    };
     if (event.target == modalGen) {
         modalGen.style.display = "none";
-    }
+    };
     if (event.target == modalGen2) {
         modalGen2.style.display = "none";
-    }
+    };
 }
 spanJ.onclick = function() {//lo dejo por si sí uso el tache
     modal.style.display = "none";
@@ -182,19 +182,19 @@ spanJ.onclick = function() {//lo dejo por si sí uso el tache
 
 function WidthChange(mq) {
   if (mq.matches){
-    $(".animacion").one("mouseover", function() {
+    $("#animacion, .animacion").one("mouseover", function() {
       $('.animacion').addClass('permahover');
     });
-    $(".audio").one("mouseover", function() {
+    $("#audio, .audio").one("mouseover", function() {
       $('.audio').addClass('permahover');
     });
-    $(".musica").one("mouseover", function() {
+    $("#musica, .musica").one("mouseover", function() {
       $('.musica').addClass('permahover');
     });
-    $(".video").one("mouseover", function() {
+    $("#video, .video").one("mouseover", function() {
       $(".video").addClass('permahover');
     });
-    $(".guion").one("mouseover", function() {
+    $("#guion, .guion").one("mouseover", function() {
       $('.guion').addClass('permahover');
     });
     $(".yo").one("mouseover", function() {
@@ -206,11 +206,11 @@ function WidthChange(mq) {
 var mq = window.matchMedia('(min-width:960px)');
     mq.addListener(WidthChange);
     WidthChange(mq);
-}
+};
 
 
 
-if(document.documentElement.clientWidth < 960) {
+if(document.documentElement.clientWidth < 961) {
 /*-----desplegar zonas en touch-----*/
 function dropZ(claseID){
   var z = document.getElementById(claseID);//identifica la zona
