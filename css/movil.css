@@ -13,11 +13,36 @@ html{
     100% {opacity:1;}
 }
 @keyframes height {
-    0% {height: 0;}
-    20% {height: 0.1;}
-    50% {height: 0.5;}
-    80% {height: 0.9;}
-    100% {height:1;}
+    0% {
+        height: 0;
+        min-height: 0;
+        opacity: 0;}
+
+    1% {
+        height: 0;
+        min-height: 0;
+        opacity: 0;}
+
+    100% {
+          height:380px;
+          min-height: 45%;
+          opacity:1;}
+}
+@keyframes heightOff {
+    0% {
+        height:380px;
+        min-height: 45%;
+        opacity:1;}
+
+    99% {
+        height: 0;
+        min-height: 0;
+        opacity: 0;}
+
+    100% {
+         height: 0;
+         min-height: 0;
+         opacity: 0;}
 }
 
 .background{
@@ -98,17 +123,29 @@ body{
   justify-content: center;
   align-items: center;
 }
+
 @media screen and (orientation: portrait) {
   .elemento{
-    display: flex;
+    display: none;
     width: 90%;
+    height: 380px;
     min-height: 45%;
-    height: 180px;
     flex-direction: column;
     margin:5px;
-    opacity: 1;
+    opacity: 0;
     border-radius: 5px;
   }
+  .elemActivo{
+    animation-name: height;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+  }
+  .elemInactivo{
+    animation-name: heightOff;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+  }
+
   .elementoCh{
     width: 60%;
     min-height: 25%;
@@ -127,15 +164,21 @@ body{
 }
 @media screen and (orientation: landscape) {
   .elemento{
-    display: flex;
+    display: none;
     width: 312px;
-    height: 380px;
+    height: 0;
     flex-direction: column;
     margin:5px;
     opacity: 1;
     border-radius: 5px;
   }
-  .elemento >div{
+  .elemActivo{
+    display: flex;
+    animation-name: height;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+  .elemActivo >div{
     height: 250px;
   }
   .elementoCh{
@@ -155,24 +198,25 @@ body{
   }
 }
 .zona1{
-  background-color: #0b476a;
-  color:#2eb6b4;
+  background-color: #00668d;
+  color:#02b6fb;
+  cursor: pointer;
 }
 .zona2{
-  background-color: #3b8685;
-  color:#82cb92;
+  background-color: #008469;
+  color:#27cead;
 }
 .zona3{
-  background-color: #78bd9a;
-  color:#0f5a58;
+  background-color: #529f32;
+  color:#89e93d;
 }
 .zona4{
-  background-color: #a8dca8;
-  color:#0a3637;
+  background-color: #8ab925;
+  color:#4c6f00;
 }
 .zona5{
-  background-color: #cff09e;
-  color:#09282a;
+  background-color: #c1d029;
+  color:#768100;
 }
 
 .titulo_zona{
@@ -200,9 +244,19 @@ body{
 .ing{
   /*background: rgba(0,0,0,0.1);*/
   align-items: center;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 50% 50%;
+  grid-template-areas: 'yo yo''servicio contacto';
+}
+.yo{
+  grid-area: yo;
+}
+.servicio{
+  grid-area: servicio;
 }
 .contacto{
-  /*background: rgba(0,0,0,0.1);*/
+  grid-area: contacto;
 }
 .Genera{
   background: rgba(0,0,0,0.2);
@@ -319,6 +373,18 @@ body{
   padding-top: 7%;
   padding-bottom: 7%;
 }
+#containerContacto{
+  display: grid;
+  grid-template-rows: 68% 32%;
+  grid-template-areas: 'imgContac''txtContac';
+}
+#imgMailContacto{
+  grid-area: imgContac;
+}
+#txtContac{
+  grid-area: txtContac;
+  align-self: baseline;
+}
 #containerDisen{
   display: grid;
   grid-template-rows: 60% 40%;
@@ -329,11 +395,6 @@ body{
 }
 #imgDisen{
   grid-area: imgDisen;
-}
-#containerContacto{
-  display: grid;
-  grid-template-rows: 68% 32%;
-  grid-template-areas: 'imgContac''txtContac';
 }
 #containerApp{
   display: grid;
@@ -390,13 +451,6 @@ body{
 #txtNoise{
   grid-area: txtNoise;
 }
-#imgMailContacto{
-  grid-area: imgContac;
-}
-#txtContac{
-  grid-area: txtContac;
-  align-self: baseline;
-}
 #txtGen{
   grid-area: txtGen;
   align-self: center;
@@ -422,7 +476,7 @@ body{
     margin: 5% auto; /* 15% from the top and centered */
     padding: 0px;
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 100%; /* Could be more or less, depending on screen size */
     height: 100%;
 }
 .modal-video{
@@ -436,8 +490,7 @@ body{
 }
 .embedVideo {
     position: absolute;
-    top: 0;
-    left: 0;
+
     width: 100%;
     height: 100%;
 }
@@ -451,7 +504,9 @@ iframe{
     height: 100%;
     left: 0; top: 0;
 }
-
+span{
+  display: none;
+}
 
 .embedPDF{
   height: 100%;
