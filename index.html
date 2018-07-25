@@ -11,6 +11,7 @@
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/script.js"></script>
 
+
     <title>Jorge Amezcua</title>
 
     <link rel="stylesheet" media='screen and (min-width: 961px)'href="css/desktop.css">
@@ -31,12 +32,15 @@
   <source src="Proyectos/Musica/DnB/DnB.ogg"></audio>
 
     <div class="background">
-    <div class="grid flexbox">
-      <div class=imgMusica id="headerMovil">
-        <img class="imgPdf" id="imgInfo"  style="cursor: pointer;" src="css/img/imgInfo.png"></img>
+    <div class="grid flexbox"><!-- GRID para Desktop, FLEX para móvil-->
+      <div class="containerTxt" id="headerMovil">
+        <img  id="imgInfo"  style="cursor: pointer;" src="css/img/imgInfo.png"></img>
+        <img  id="imgMailContacto"  style="cursor: pointer;" src="css/img/mail.png"></img>
+        <p class="txtMusica" id= "yo"> Jorge Amezcua </p>
+        <p class="txtPeq descripYo"> <br> Ing. en Producción Musical Digital <br> Tec de Monterrey CCM </p>
       </div>
       <div class= "elementoCh ing yo">
-          <div class="sombra" id='containerIng'>
+          <div class="containerTxt" id='containerIng'>
             <p class="txtMusica" id= "yo"> Jorge Amezcua </p>
             <p class="txtPeq carrera"> <br> Ing. en Producción Musical Digital </p>
             <p class="txtPeq"> Tec de Monterrey CCM </p>
@@ -45,7 +49,7 @@
       <div class= "elementoCh contacto yo">
         <div class="imgMusica" id="containerContacto">
           <img class="imgPdf" id="imgMailContacto"  style="cursor: pointer;" src="css/img/mail.png"></img>
-          <div class="sombra" id='txtContac'>
+          <div class="containerTxt" id='txtContac'>
             <p class="txtMusica"> Contacto </p>
           </div>
         </div>
@@ -56,7 +60,7 @@
       </div>
       <div class= "elemento app audio elemInactivo">
         <div class="imgMusica" id="containerApp" style="cursor: pointer;">
-          <div class="sombra" id="txtApp">
+          <div class="containerTxt" id="txtApp">
             <p class="txtMusica"> NoiseScape web app </p>
             <p class="txtPeq">  Programación y diseño </p>
           </div>
@@ -69,7 +73,7 @@
       </div>
       <div class= "elemento Noise animacion elemInactivo">
          <div class="imgMusica" id="containerNoise" style="cursor: pointer;">
-           <div class="sombra" id='txtNoise'>
+           <div class="containerTxt" id='txtNoise'>
              <p class="txtMusica"> Teaser: Noise</p>
              <p class="txtPeq"> Animación y Diseño </p>
            </div>
@@ -81,7 +85,7 @@
           </div>
           <div class="imgMusica" id="containerGenVid" style="cursor: pointer;">
           </div>
-          <div class="sombra" id="txtGen">
+          <div class="containerTxt" id="txtGen">
              <p class="txtMusica"> Genera</p>
              <p class="txtPeq"> Animación, Música y Edición </p>
           </div>
@@ -98,7 +102,7 @@
           style="cursor: pointer;" onclick="togglePlayJazz()">
         </img>
           <img class="imgPdf" id="imgPdfJazz" style="cursor: pointer;" src="css/img/score.png"></img>
-        <div class="sombra" id='txtJ'>
+        <div class="containerTxt" id='txtJ'>
           <p class="txtMusica"> "Excitement"</p>
           <p class="txtPeq"> Composición original </p>
         </div>
@@ -110,7 +114,7 @@
          style="cursor: pointer;" onclick="togglePlaySolil()">
        </img>
          <img class="imgPdf" id="imgPdfSolil" style="cursor: pointer;" src="css/img/score.png"></img>
-         <div class="sombra" id='txtSol'>
+         <div class="containerTxt" id='txtSol'>
            <p class="txtMusica"> "Soliloquio"</p>
            <p class="txtPeq"> Arreglo orquestal </p>
         </div>
@@ -121,7 +125,7 @@
         <img class="imgPlayM" id="imgPlayBass" src="css/img/play_musica.png"
         style="cursor: pointer;" onclick="togglePlayBass()">
         </img>
-        <div class="sombra" id='txtBass'>
+        <div class="containerTxt" id='txtBass'>
           <p class="txtMusica"> "Night n' Bass"</p>
           <p class="txtPeq"> Composición original </p>
         </div>
@@ -134,7 +138,7 @@
       </div>
       <div class= "elemento Temporales video elemInactivo">
          <div class="imgMusica" id="containerTemp" style="cursor: pointer;">
-           <div class="sombra" id='txtTemp'>
+           <div class="containerTxt" id='txtTemp'>
              <p class="txtMusica"> "Temporales"</p>
              <p class="txtPeq"> Cámara y Edición </p>
            </div>
@@ -142,7 +146,7 @@
       </div>
       <div class= "elemento Tokio video elemInactivo">
          <div class="imgMusica" id="containerTokio" style="cursor: pointer;">
-           <div class="sombra" id='txtTokio'>
+           <div class="containerTxt" id='txtTokio'>
              <p class="txtMusica"> "Tokio"</p>
              <p class="txtPeq"> Dirección, Cámara y Edición </p>
            </div>
@@ -150,7 +154,7 @@
       </div>
       <div class= "elemento Dic13 video elemInactivo">
          <div class="imgMusica" id="containerDic13" style="cursor: pointer;">
-           <div class="sombra" id='txtDic13'>
+           <div class="containerTxt" id='txtDic13'>
              <p class="txtMusica"> "Imaginación"</p>
              <p class="txtPeq"> Dirección, Cámara y Edición </p>
            </div>
@@ -164,7 +168,7 @@
       <div class= "elemento adaptacion guion elemInactivo">
         <div class="imgMusica" id="containerSueno" >
           <img class="imgPdf" id="imgPdfSueno" style="cursor: pointer;" src="css/img/imgPdf.png"></img>
-          <div class="sombra" id='txtSueno'>
+          <div class="containerTxt" id='txtSueno'>
             <p class="txtMusica"> "Sueño"</p>
             <p class="txtPeq"> Adaptación a cortometraje</p>
           </div>
@@ -173,7 +177,7 @@
       <div class= "elemento insectos guion elemInactivo">
         <div class="imgMusica" id="containerInsec">
           <img class="imgPdf" id="imgPdfInsec" style="cursor: pointer;" src="css/img/imgPdf.png"></img>
-          <div class="sombra" id='txtInsec'>
+          <div class="containerTxt" id='txtInsec'>
             <p class="txtMusica">Insectos</p>
             <p class="txtPeq"> Guión Original (vista previa) </p>
           </div>
@@ -183,9 +187,8 @@
  <div class= "elementoCh diseño yo">
    <div class="imgMusica" id='containerDisen'>
      <img class="imgPdf" id="imgDisen" src="css/img/imgDisen.png"></img>
-     <div class="sombra" id="txtDisen">
-       <p class="txtPeq"> Diseño y programación:</p>
-       <p class="txtMusica"> Jorge Amezcua </p>
+     <div class="containerTxt" id="txtDisen">
+       <p class="txtPeq"> Diseño y programación: <br> Jorge Amezcua</p>
      </div>
    </div>
  </div>

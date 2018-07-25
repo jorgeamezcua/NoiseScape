@@ -108,7 +108,7 @@ body{
   animation-fill-mode: forwards;
   grid-row:4;
 }
-.sombra{
+.containerTxt{
   color:white;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 1.5vw;
