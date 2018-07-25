@@ -66,11 +66,12 @@ body{
   width: 90%;
   height: 90%;
   max-height:95%;
+  margin: auto auto;
 }
 /*-----IMAGENES y TXT general------*/
 .imgPlayM{
   max-width: 95%;
-  max-height: 65%;
+  max-height: 85%;
   display: inline-flex;
   border-radius: 5px;
   align-self: center;
@@ -78,7 +79,7 @@ body{
 }
 .imgPdf{
   max-width: 95%;
-  max-height: 65%;
+  max-height: 85%;
   display: inline-flex;
   align-self: center;
   justify-self: center;
@@ -117,7 +118,7 @@ body{
   width: 100%;
   height: 15%;
   margin: 0 auto;
-  position: relative;
+
   justify-content: center;
   align-items: center;
 }
@@ -320,6 +321,7 @@ body{
   grid-template-areas: 'playTokio''txtTokio';
 }
 #containerDic13{
+  width: 100%;
   display: grid;
   grid-template-rows: 61.8% 38.2%;
   grid-template-areas: 'playDic13''txtDic13';
@@ -351,16 +353,17 @@ body{
   top: 0;
   margin: 5px;
   width: 95%;
-  height: 196px;
   display: grid;
-  grid-template-rows: 75px 30px 55px;
-  grid-template-columns: 25% 50% 25%;
+  grid-template-rows: 75px 30px minmax(min-content, 1fr) 50px;;
+  grid-template-columns: 75px auto 75px;
   grid-template-areas:
     'imgInfo  .  imgContac'
     'Jorge    Jorge  Jorge'
-    'desc     desc   desc ';
+    'desc     desc   desc '
+    '. . .';
 }
 #imgMailContacto{
+  float: right;
   height: 100%;
   width: auto;
   grid-area: imgContac;
@@ -384,9 +387,11 @@ body{
 }
 #containerDisen{
   display: grid;
-  grid-template-columns: 250px;
-  grid-template-rows: 80px 30px;
+  grid-template-rows: 1fr 1fr;
   grid-template-areas: 'imgDisen''txtDisen';
+}
+.diseño{
+  width: 100%;
 }
 #txtDisen{
   grid-area: txtDisen;
@@ -412,6 +417,7 @@ body{
 }
 #imgPlayBass{
   grid-area:playBass;
+  max-height: 75%;
   margin:0 auto;
 }
 #imgPdfInsec{
