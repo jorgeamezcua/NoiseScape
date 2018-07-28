@@ -48,7 +48,7 @@ function dropZ(){};
 /*----Modal PDFs----*/
 
 
-function Modal(tipo,ruta){
+function Modal(tipo,ruta = ''){
 
 var embedWeb = document.getElementById('embedContacto');
 var embedPdf = document.getElementById('embedPDF');
