@@ -1,5 +1,4 @@
 /*--- Play/Pausa - Música ----*/
-
 function togglePlayJazz() {
   var audio = document.getElementById('AudioJazz');
 
@@ -15,7 +14,6 @@ function togglePlayJazz() {
       document.getElementById('imgPlayJazz').src = "./css/img/play_musica.png";
   };
 }
-
 function togglePlaySolil() {
   var audio = document.getElementById('AudioSolil');
 
@@ -45,140 +43,63 @@ function togglePlayBass() {
   audio.onended = function() {
       document.getElementById('imgPlayBass').src = "./css/img/play_musica.png";
   };
-}
-
+};
+function dropZ(){};
 /*----Modal PDFs----*/
-window.onload = function(){
 
-var modalYo = document.getElementById('modalYo');
-var modalJ = document.getElementById('modalJazz');
-var modalSol = document.getElementById('modalSolil');
-var modalSueno = document.getElementById('modalSueno');
-var modalInsec = document.getElementById('modalInsec');
-var modalContacto = document.getElementById('modalContacto');
-var modalApp = document.getElementById('modalApp');
+
+function Modal(tipo,ruta){
+
+var embedWeb = document.getElementById('embedContacto');
+var embedPdf = document.getElementById('embedPDF');
+var embedVideo = document.getElementById('embedVideo');
+
+var modalWeb = document.getElementById('modalContacto');
+var modalPdf = document.getElementById('modalPdf');
 var modalVideo = document.getElementById('modalVideo');
-var btnYo = document.getElementById("containerIng");
-var btnJ = document.getElementById("imgPdfJazz");
-var btnSol = document.getElementById("imgPdfSolil");
-var btnSueno = document.getElementById("imgPdfSueno");
-var btnInsec = document.getElementById("imgPdfInsec");
-var btnContacto = document.getElementById("imgMailContacto");
-var btnApp = document.getElementById("containerApp");
-var btnNoise = document.getElementById("containerNoise");
-var btnTemp = document.getElementById("containerTemp");
-var btnTokio = document.getElementById("containerTokio");
-var btnDic13 = document.getElementById("containerDic13");
-var btnGen = document.getElementById("containerGenIntro");
-var btnGen2 = document.getElementById("containerGenVid");
 
-// Get the <span> element that closes the modal
-var spanJ = document.getElementsByClassName("close")[0];
 
-/*----Botones----*/
-/*btnYo.onclick = function() {
-  var iframe = document.getElementById("iframeYo");
-  iframe.setAttribute( "src", "https://www.youtube.com//embed/cCb1HM0_CVs?rel=0&showinfo=0&autoplay=1" );
-    modalYo.style.display = "block";
-}*/
-btnJ.onclick = function() {
-    modalJ.style.display = "block";
-}
-btnSol.onclick = function() {
-    modalSol.style.display = "block";
-}
-btnSueno.onclick = function() {
-    modalSueno.style.display = "block";
-}
-btnInsec.onclick = function() {
-    modalInsec.style.display = "block";
-}
-btnContacto.onclick = function() {
-    modalContacto.style.display = "block";
-}
-btnApp.onclick = function() {
-    modalApp.style.display = "block";
-}
-btnNoise.onclick = function() {
-  var iframe = document.getElementById("iframeNoise");
-  iframe.setAttribute( "src", "https://www.youtube.com//embed/cCb1HM0_CVs?rel=0&showinfo=0&autoplay=1" );
-    modalNoise.style.display = "block";
-  }
-btnTemp.onclick = function() {
-  var iframe = document.getElementById("iframeTemp");
-  iframe.setAttribute( "src", "https://www.youtube.com//embed/ubvK5Z4ICJw?rel=0&showinfo=0&autoplay=1" );
-    modalTemp.style.display = "block";
-  }
-btnTokio.onclick = function() {
-  var iframe = document.getElementById("iframeTokio");
-  iframe.setAttribute( "src", "https://www.youtube.com//embed/B8qGCgKWebI?rel=0&showinfo=0&autoplay=1" );
-    modalTokio.style.display = "block";
-  }
-btnDic13.onclick = function() {
-  var iframe = document.getElementById("iframeDic13");
-  iframe.setAttribute( "src", "https://www.youtube.com//embed/f_n90a8xTfQ?rel=0&showinfo=0&autoplay=1" );
-    modalDic13.style.display = "block";
-  }
-btnGen.onclick = function() {
-  var iframe = document.getElementById("iframeGen");
-  iframe.setAttribute( "src", "https://www.youtube.com/embed/QVzKaAV6BPo?rel=0&showinfo=0&autoplay=1" );
-    modalGen.style.display = "block";
-  }
-btnGen2.onclick = function() {
-var iframe = document.getElementById("iframeGen2");
-iframe.setAttribute( "src", "https://www.youtube.com/embed/_yAN6LV13II?rel=0&showinfo=0&autoplay=1" );
-  modalGen2.style.display = "block";
-  }
 
-// When the user clicks on <span> (x), close the modal
-spanJ.onclick = function() {
-    modalJ.style.display = "none";
-}
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modalYo) {
-      modalYo.style.display = "none";
+  if(tipo ==='Pdf'){
+    embedPdf.setAttribute( "src", ruta);
+    modalPdf.style.display = "block";
+  } else if(tipo==='Video'){
+    embedVideo.setAttribute( "src", ruta);
+    modalVideo.style.display = "block";
+  } else if(tipo=='Web'){//contacto y app
+    embedWeb.setAttribute( "src", ruta);
+    modalWeb.style.display = "block";
   };
-    if (event.target == modalJ) {
-        modalJ.style.display = "none";
+
+
+};//clic Modal
+
+document.getElementsByClassName("close").onclick = function(event) {
+    if (event.target == modalPdf) {
+        modalPdf.style.display = "none";
     };
-    if (event.target == modalSol) {
-        modalSol.style.display = "none";
-    };
-    if (event.target == modalSueno) {
-        modalSueno.style.display = "none";
-    };
-    if (event.target == modalInsec) {
-        modalInsec.style.display = "none";
+    if (event.target == modalVideo) {
+        modalVideo.style.display = "none";
     };
     if (event.target == modalContacto) {
         modalContacto.style.display = "none";
     };
-    if (event.target == modalApp) {
-        modalApp.style.display = "none";
+};
+
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modalPdf) {
+        modalPdf.style.display = "none";
     };
-    if (event.target == modalNoise) {
-        modalNoise.style.display = "none";
+    if (event.target == modalVideo) {
+        modalVideo.style.display = "none";
     };
-    if (event.target == modalTemp) {
-        modalTemp.style.display = "none";
+    if (event.target == modalContacto) {
+        modalContacto.style.display = "none";
     };
-    if (event.target == modalTokio) {
-        modalTokio.style.display = "none";
-    };
-    if (event.target == modalDic13) {
-        modalDic13.style.display = "none";
-    };
-    if (event.target == modalGen) {
-        modalGen.style.display = "none";
-    };
-    if (event.target == modalGen2) {
-        modalGen2.style.display = "none";
-    };
-}
-spanJ.onclick = function() {//lo dejo por si sí uso el tache
-    modal.style.display = "none";
-  }
+};
+window.onload = function(){
 
 function WidthChange(mq) {
   if (mq.matches){
@@ -201,17 +122,21 @@ function WidthChange(mq) {
       $('.yo').addClass('permahover');
     });
   } else{};
-  }
-
-var mq = window.matchMedia('(min-width:960px)');
+};
+var mq = window.matchMedia('(min-width:1025px)');
     mq.addListener(WidthChange);
     WidthChange(mq);
-};
+};//window onload
 
 
 
-if(document.documentElement.clientWidth < 961) {
+if(document.documentElement.clientWidth < 1025) {
 /*-----desplegar zonas en touch-----*/
+document.addEventListener("backbutton", backKeyDown, true);
+function backKeyDown() {
+     // Call my back key code here.
+     alert('go back!');
+}
 function dropZ(claseID){
   var z = document.getElementById(claseID);//identifica la zona
   var elementos = document.getElementsByClassName(claseID);//identifica elementos de esa zona
@@ -238,4 +163,4 @@ function dropZ(claseID){
   }
 };
 };
-}
+};//client width
