@@ -99,9 +99,10 @@ window.onclick = function(event) {
         modalContacto.style.display = "none";
     };
 };
-window.onload = function(){
+
 
 function WidthChange(mq) {
+  window.onload = function(){
   if (mq.matches){
     $("#animacion, .animacion").one("mouseover", function() {
       $('.animacion').addClass('permahover');
