@@ -151,9 +151,6 @@ body{
   background-color: #c1d029;
   color:#768100;
 }
-.ing{
-  cursor: pointer;
-}
 .adaptacion{
   grid-area: adaptacion;
   background: rgba(0,0,0,0.1);
@@ -168,6 +165,7 @@ body{
   align-items: center;
 }
 .ing{
+  cursor: pointer;
   grid-area: yoIng;
   /*background: rgba(0,0,0,0.1);*/
   align-items: center;
@@ -239,6 +237,14 @@ body{
 
 /*----CONTAINERS, IMG y TXT individuales-----*/
 #headerMovil{display: none;}
+#containerIng{
+  height:95%;
+  width:95%;
+  max-height:95%;
+  margin:10px;
+  padding-top: 7%;
+  padding-bottom: 7%;
+}
 #containerGenIntro{
   background-image: url("img/imgGen.jpg");
   background-position: center center;
@@ -303,14 +309,6 @@ body{
   display: grid;
   grid-template-rows: 61.8% 38.2%;
   grid-template-areas: 'pdfInsec''txtInsec';
-}
-#containerIng{
-  height:95%;
-  width:95%;
-  max-height:95%;
-  margin:10px;
-  padding-top: 7%;
-  padding-bottom: 7%;
 }
 #containerDisen{
   display: grid;

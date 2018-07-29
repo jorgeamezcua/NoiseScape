@@ -47,42 +47,37 @@ function togglePlayBass() {
 function dropZ(){};
 /*----Modal PDFs----*/
 
+function ModalPdf(ruta = ''){
+  var embedPdf = document.getElementById('embedPDF');
+  var modalPdf = document.getElementById('modalPdf');
+  embedPdf.setAttribute( "src", ruta);
+  modalPdf.style.display = "block";
+}
 
-function Modal(tipo,ruta = ''){
-
-var embedWeb = document.getElementById('embedContacto');
-var embedPdf = document.getElementById('embedPDF');
+function ModalVideo(ruta = ''){
 var embedVideo = document.getElementById('embedVideo');
-
-var modalWeb = document.getElementById('modalContacto');
-var modalPdf = document.getElementById('modalPdf');
 var modalVideo = document.getElementById('modalVideo');
+embedVideo.setAttribute( "src", ruta);
+modalVideo.style.display = "block";
+};
 
-
-
-  if(tipo ==='Pdf'){
-    embedPdf.setAttribute( "src", ruta);
-    modalPdf.style.display = "block";
-  } else if(tipo==='Video'){
-    embedVideo.setAttribute( "src", ruta);
-    modalVideo.style.display = "block";
-  } else if(tipo=='Web'){//contacto y app
-    embedWeb.setAttribute( "src", ruta);
-    modalWeb.style.display = "block";
-  };
-
-
+function ModalWeb(ruta = ''){
+var embedWeb = document.getElementById('embedWeb');
+var modalWeb = document.getElementById('modalWeb');
+embedWeb.setAttribute( "src", ruta);
+modalWeb.style.display = "block";
 };//clic Modal
 
 document.getElementsByClassName("close").onclick = function(event) {
+
     if (event.target == modalPdf) {
         modalPdf.style.display = "none";
     };
     if (event.target == modalVideo) {
         modalVideo.style.display = "none";
     };
-    if (event.target == modalContacto) {
-        modalContacto.style.display = "none";
+    if (event.target == modalWeb) {
+        modalWeb.style.display = "none";
     };
 };
 
@@ -95,8 +90,8 @@ window.onclick = function(event) {
     if (event.target == modalVideo) {
         modalVideo.style.display = "none";
     };
-    if (event.target == modalContacto) {
-        modalContacto.style.display = "none";
+    if (event.target == modalWeb) {
+        modalWeb.style.display = "none";
     };
 };
 window.onload = function(){

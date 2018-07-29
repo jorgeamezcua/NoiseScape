@@ -405,7 +405,6 @@ body{
   grid-template-rows: 61.8% 38.2%;
   grid-template-areas: 'imgApp''txtApp';
 }
-
 #txtApp{
   grid-area:txtApp;
 }
@@ -505,6 +504,9 @@ iframe{
     width: 100%;
     height: 100%;
     left: 0; top: 0;
+}
+#contentContacto{
+  margin-top: 72px;
 }
 .close{
   font-size: 40px;
