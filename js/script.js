@@ -126,12 +126,14 @@ var mq = window.matchMedia('(min-width:1025px)');
 
 
 if(document.documentElement.clientWidth < 1025) {
+  function ModalPdf(ruta=''){
+    var link = document.createElement('a');
+    link.href = ruta;
+    link.download = '';
+    link.dispatchEvent(new MouseEvent('click'));
+  };
 /*-----desplegar zonas en touch-----*/
-document.addEventListener("backbutton", backKeyDown, true);
-function backKeyDown() {
-     // Call my back key code here.
-     alert('go back!');
-}
+
 function dropZ(claseID){
   var z = document.getElementById(claseID);//identifica la zona
   var elementos = document.getElementsByClassName(claseID);//identifica elementos de esa zona

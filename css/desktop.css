@@ -2,6 +2,7 @@
 html{
   height:100%;
 }
+
 @keyframes opacityZonas {
     0% {opacity: 0;}
     25% {opacity: 0;}
