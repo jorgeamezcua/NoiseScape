@@ -46,7 +46,7 @@ function togglePlayBass() {
 };
 function dropZ(){};
 /*----Modal PDFs----*/
-
+if(document.documentElement.clientWidth > 1024) {
 function ModalPdf(ruta = ''){
   var embedPdf = document.getElementById('embedPDF');
   var modalPdf = document.getElementById('modalPdf');
@@ -64,25 +64,16 @@ modalVideo.style.display = "block";
 function ModalWeb(ruta = ''){
 var embedWeb = document.getElementById('embedWeb');
 var modalWeb = document.getElementById('modalWeb');
-embedWeb.setAttribute( "src", ruta);
+embedWeb.setAttribute("src", ruta);
 modalWeb.style.display = "block";
-};//clic Modal
-
-document.getElementsByClassName("close").onclick = function(event) {
-
-    if (event.target == modalPdf) {
-        modalPdf.style.display = "none";
-    };
-    if (event.target == modalVideo) {
-        modalVideo.style.display = "none";
-    };
-    if (event.target == modalWeb) {
-        modalWeb.style.display = "none";
-    };
 };
 
-
-// When the user clicks anywhere outside of the modal, close it
+function ModalContacto(ruta = ''){
+var embedWeb = document.getElementById('embedContacto');
+var modalWeb = document.getElementById('modalContacto');
+embedWeb.setAttribute("src", ruta);
+modalWeb.style.display = "block";
+};//clic Modal
 window.onclick = function(event) {
     if (event.target == modalPdf) {
         modalPdf.style.display = "none";
@@ -93,7 +84,12 @@ window.onclick = function(event) {
     if (event.target == modalWeb) {
         modalWeb.style.display = "none";
     };
+    if (event.target == modalContacto) {
+        modalContacto.style.display = "none";
+    };
 };
+}; //width > 2014
+
 window.onload = function(){
 
 function WidthChange(mq) {
@@ -125,13 +121,56 @@ var mq = window.matchMedia('(min-width:1025px)');
 
 
 
-if(document.documentElement.clientWidth < 1025) {
+if(document.documentElement.clientWidth <= 1024) {
+
   function ModalPdf(ruta=''){
     var link = document.createElement('a');
     link.href = ruta;
     link.download = '';
     link.dispatchEvent(new MouseEvent('click'));
   };
+
+  function ModalContacto(ruta=''){
+      var embedWebM = document.getElementById('embedContacto');
+      var modalWebM = document.getElementById('modalContacto');
+      embedWeb.setAttribute( "src", ruta);
+      modalWeb.style.display = "block";
+  };
+  function ModalWeb(ruta=''){
+    var embedWebM = document.getElementById('embedWeb');
+    var modalWebM = document.getElementById('modalWeb');
+    embedWeb.setAttribute( "src", ruta);
+    modalWeb.style.display = "block";
+  };
+  document.getElementsByClassName("close").onclick = function(event) {
+      if (event.target == modalPdf) {
+          modalPdf.style.display = "none";
+      };
+      if (event.target == modalVideo) {
+          modalVideo.style.display = "none";
+      };
+      if (event.target == modalWeb) {
+          modalWeb.style.display = "none";
+      };
+  };
+
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+      if (event.target == modalPdf) {
+          modalPdf.style.display = "none";
+      };
+      if (event.target == modalVideo) {
+          modalVideo.style.display = "none";
+      };
+      if (event.target == modalWeb) {
+          modalWeb.style.display = "none";
+      };
+      if (event.target == ModalContacto) {
+          modalContacto.style.display = "none";
+      };
+  };
+
 /*-----desplegar zonas en touch-----*/
 
 function dropZ(claseID){
