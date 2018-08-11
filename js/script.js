@@ -121,8 +121,14 @@ var mq = window.matchMedia('(min-width:1025px)');
 
 
 
-if(document.documentElement.clientWidth <= 1024) {
-
+if(document.documentElement.clientWidth < 1025) {
+  
+  function ModalVideo(ruta = ''){
+  var embedVideo = document.getElementById('embedVideo');
+  var modalVideo = document.getElementById('modalVideo');
+  embedVideo.setAttribute( "src", ruta);
+  modalVideo.style.display = "block";
+  };
   function ModalPdf(ruta=''){
     var link = document.createElement('a');
     link.href = ruta;
