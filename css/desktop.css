@@ -86,11 +86,11 @@ body{
   grid-template-columns: 20% 20% 20% 20% 20%;
   grid-template-rows: 22% 22% 10% 22% 22%;
   grid-template-areas:
- "yoIng    yoIng    jazz     bass        contacto "
- "app      Noise    solil    Temporales  adaptacion "
- "zona1    zona2  zona3    zona4       zona5 "
- "Genera   Genera Genera   Tokio       insectos "
- "Genera   Genera Genera   dic13       diseño ";
+ "yoIng    yoIng    jazz      Romanos12   contacto "
+ "app      Noise    solil     Temporales  adaptacion "
+ "zona1    zona2    zona3     zona4       zona5 "
+ "Genera    Genera   TemaGen   Tokio       insectos "
+ "DBmenos    DBmenos  bass      dic13       diseño ";
 }
 
 .titulo_zona{
@@ -105,7 +105,7 @@ body{
   justify-content: center;
   align-items: center;
   animation-name: opacityZonas;
-  animation-duration: 0s;
+  animation-duration: 0.5s;
   animation-fill-mode: forwards;
   grid-row:4;
 }
@@ -124,6 +124,7 @@ body{
   animation-name: opacity;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
+  cursor: pointer;
 }
 
 /*----CLASES PRINCIPALES---*/
@@ -175,16 +176,23 @@ body{
   grid-area: contacto;
   /*background: rgba(0,0,0,0.1);*/
 }
-.Genera{
-  grid-area:Genera;
-  background: rgba(85,111,122,0.5);
+.Perfil{
+  grid-area: Perfil;
+  /*background: rgba(0,0,0,0.1);*/
 }
-#containerGen{
-  height: 100%;
-  display:grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 20% 80%;
-  grid-template-areas: 'txtGen txtGen''introGen videoGen';
+.Genera{
+  background-image: url("img/imgLeds.jpg");
+  grid-area: Genera;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.DBmenos{
+  background-image: url("img/imgDBmenos.png");
+  grid-area: DBmenos;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .app{
   grid-area: app;
@@ -208,9 +216,20 @@ body{
   grid-area: bass;
   background: rgba(251,109,0,0.3);
 }
+.musicGen{
+  grid-area: TemaGen;
+  background: rgba(251,109,0,0.3);
+}
 .jazz{
   grid-area: jazz;
   background: rgba(251,109,0,0.3);
+}
+.Romanos12{
+  grid-area: Romanos12;
+  background-image: url("img/imgRomanos12.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .Temporales{
   grid-area: Temporales;
@@ -246,21 +265,24 @@ body{
   padding-top: 7%;
   padding-bottom: 7%;
 }
-#containerGenIntro{
-  background-image: url("img/imgGen.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  grid-area: introGen;
+#containerPerfil{
+  height:95%;
+  width:95%;
+  max-height:95%;
+  margin:10px;
+  padding-top: 7%;
+  padding-bottom: 7%;
 }
-#containerGenVid{
-  background-image: url("img/imgLeds.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  grid-area: videoGen;
+#containerGen{
+  display:grid;
+  grid-template-rows: 61.8% 38.2%;
+  grid-template-areas: 'videoGen''txtGen';
 }
-
+#containerDBmenos{
+  display:grid;
+  grid-template-rows: 61.8% 38.2%;
+  grid-template-areas: 'videoDBmenos''txtDBMenos';
+}
 #containerJ{
   display: grid;
   grid-template-rows: 61.8% 38.2%;
@@ -275,6 +297,16 @@ body{
   display: grid;
   grid-template-rows: 61.8% 38.2%;
   grid-template-areas: 'playBass''txtBass';
+}
+#containerMusicGen{
+  display: grid;
+  grid-template-rows: 61.8% 38.2%;
+  grid-template-areas: 'playGen''txtMusicGen';
+}
+#containerRomanos12{
+  display: grid;
+  grid-template-rows: 61.8% 38.2%;
+  grid-template-areas: 'playRomanos12''txtRomanos12';
 }
 #containerTemp{
   display: grid;
@@ -333,6 +365,9 @@ body{
 #imgPlayJazz{
   grid-area:playJ;
 }
+#imgPlayGen{
+  grid-area:playGen;
+}
 #imgPlaySolil{
   grid-area:playSol;
 }
@@ -364,8 +399,14 @@ body{
 #txtSol{
   grid-area: txtSol;
 }
+#txtMusicGen{
+  grid-area: txtMusicGen;
+}
 #txtBass{
   grid-area: txtBass;
+}
+#txtRomanos12{
+  grid-area: txtRomanos12;
 }
 #txtTemp{
   grid-area: txtTemp;
@@ -389,7 +430,15 @@ body{
 #txtGen{
   grid-area: txtGen;
   align-self: center;
+  background: rgb(0,0,0);
+background: radial-gradient(circle, rgba(0,0,0,0.49343487394957986) 74%, rgba(255,255,255,0) 100%);
+
 }
+#txtDBMenos{
+  grid-area: txtDBMenos;
+  align-self: center;
+}
+
 
 /**---------Modal------------*/
 

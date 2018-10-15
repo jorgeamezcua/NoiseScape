@@ -30,6 +30,9 @@
     <audio preload="none" id="AudioBass">
 <source src="Proyectos/Musica/DnB/DnB.mp3"></audio>
   <source src="Proyectos/Musica/DnB/DnB.ogg"></audio>
+    <audio preload="none" id="AudioGen">
+<source src="Proyectos/Musica/Genera/TemaGenera.mp3"></audio>
+  <source src="Proyectos/Musica/Genera/TemaGenera.ogg"></audio>
 
 <div class="background">
 <div class="grid flexbox"><!-- GRID para Desktop, FLEX para móvil-->
@@ -55,12 +58,18 @@
       </div>
     </div>
   </div>
+  <div class= "elementoCh Perfil yo">
+      <div class="containerTxt" id='containerPerfil'>
+        <p class="txtMusica" id= "yo"> Perfil </p>
+        <p class="txtPeq carrera"> <br> Productor audiovisual con habilidades de animación gráfica y diseño web responsivo. </p>
+      </div>
+  </div>
   <!--TITULOS-->
   <div class="zona zona1" id= "audio" onclick="dropZ('audio')">
     <p class="titulo_zona"> Audio </p>
   </div>
   <div class= "elemento app audio elemInactivo">
-    <div class="imgMusica" id="containerApp" style="cursor: pointer;" onclick ="ModalWeb('Proyectos/NoiseScape/index.html')">
+    <div class="imgMusica" id="containerApp"  onclick ="ModalWeb('Proyectos/NoiseScape/index.html')">
       <div class="containerTxt" id="txtApp">
         <p class="txtMusica"> NoiseScape web app </p>
         <p class="txtPeq">  Programación y diseño </p>
@@ -73,7 +82,7 @@
     <p class="titulo_zona"> Animación </p>
   </div>
   <div class= "elemento Noise animacion elemInactivo">
-     <div class="imgMusica" id="containerNoise" style="cursor: pointer;" onclick="ModalVideo('https://www.youtube.com//embed/cCb1HM0_CVs?rel=0&showinfo=0&autoplay=1')">
+     <div class="imgMusica" id="containerNoise"  onclick="ModalVideo('https://www.youtube.com//embed/cCb1HM0_CVs?rel=0&showinfo=0&autoplay=1')">
        <div class="containerTxt" id='txtNoise'>
          <p class="txtMusica"> Teaser: Noise</p>
          <p class="txtPeq"> Animación y Diseño </p>
@@ -81,17 +90,23 @@
      </div>
   </div>
   <div class="elemento Genera animacion elemInactivo">
-    <div class="" id="containerGen">
-      <div class="imgMusica" id="containerGenIntro"  style="cursor: pointer;" onclick="ModalVideo('https://www.youtube.com/embed/QVzKaAV6BPo?rel=0&showinfo=0&autoplay=1')">
-      </div>
-      <div class="imgMusica" id="containerGenVid"    style="cursor: pointer;" onclick="ModalVideo('https://www.youtube.com/embed/_yAN6LV13II?rel=0&showinfo=0&autoplay=1')">
-      </div>
+    <div class="imgMusica" id="containerGen"     onclick="ModalVideo('https://www.youtube.com/embed/_yAN6LV13II?rel=0&showinfo=0&autoplay=1')">
       <div class="containerTxt" id="txtGen">
          <p class="txtMusica"> Genera</p>
-         <p class="txtPeq"> Animación, Música y Edición </p>
+         <p class="txtPeq"> Animación y Edición </p>
       </div>
     </div>
   </div>
+  <div class="elemento DBmenos animacion elemInactivo">
+    <div class="imgMusica" id="containerDBmenos"   onclick="ModalVideo('https://youtube.com/embed/ZgBb_mTJN-w?rel=0&showinfo=0&autoplay=1')">
+
+    <div class="containerTxt" id="txtDBMenos">
+       <p class="txtMusica"> DB Menos</p>
+       <p class="txtPeq"> Animación y Edición </p>
+    </div>
+   </div>
+  </div>
+
 
 
   <div class="zona zona3" id= "musica" onclick="dropZ('musica')">
@@ -100,9 +115,9 @@
   <div class= "elemento jazz musica elemInactivo">
     <div class="imgMusica" id="containerJ">
       <img class="imgPlayM" id="imgPlayJazz" src="css/img/play_musica.png"
-      style="cursor: pointer;" onclick="togglePlayJazz()">
+       onclick="togglePlayJazz()">
       </img>
-      <img class="imgPdf" id="imgPdfJazz" style="cursor: pointer;" onclick ="ModalPdf('Proyectos/Musica/Excitement/Excitement_JorgeAmezcua.pdf')" src="css/img/score.png"></img>
+      <img class="imgPdf" id="imgPdfJazz"  onclick ="ModalPdf('Proyectos/Musica/Excitement/Excitement_JorgeAmezcua.pdf')" src="css/img/score.png"></img>
       <div class="containerTxt" id='txtJ'>
         <p class="txtMusica"> "Excitement"</p>
         <p class="txtPeq"> Composición original </p>
@@ -112,19 +127,32 @@
   <div class= "elemento solil musica elemInactivo">
    <div class="imgMusica" id="containerSol">
      <img class="imgPlayM" id="imgPlaySolil" src="css/img/play_musica.png"
-     style="cursor: pointer;" onclick="togglePlaySolil()">
+      onclick="togglePlaySolil()">
    </img>
-     <img class="imgPdf" id="imgPdfSolil" style="cursor: pointer;" onclick="ModalPdf('Proyectos/Musica/Soliloquio/Soliloquio.pdf')" src="css/img/score.png"></img>
+     <img class="imgPdf" id="imgPdfSolil"  onclick="ModalPdf('Proyectos/Musica/Soliloquio/Soliloquio.pdf')" src="css/img/score.png"></img>
      <div class="containerTxt" id='txtSol'>
        <p class="txtMusica"> "Soliloquio"</p>
        <p class="txtPeq"> Arreglo orquestal </p>
     </div>
    </div>
   </div>
+
+  <div class= "elemento musicGen musica elemInactivo">
+    <div class="imgMusica" id="containerMusicGen">
+      <img class="imgPlayM" id="imgPlayGen" src="css/img/play_musica.png"
+       onclick="togglePlayGen()">
+      </img>
+      <div class="containerTxt" id='txtMusicGen'>
+        <p class="txtMusica"> "Tema Genera"</p>
+        <p class="txtPeq"> Composición original </p>
+      </div>
+    </div>
+  </div>
+
   <div class= "elemento Bass musica elemInactivo">
     <div class="imgMusica" id="containerBass">
       <img class="imgPlayM" id="imgPlayBass" src="css/img/play_musica.png"
-      style="cursor: pointer;" onclick="togglePlayBass()">
+       onclick="togglePlayBass()">
       </img>
       <div class="containerTxt" id='txtBass'>
         <p class="txtMusica"> "Night n' Bass"</p>
@@ -137,8 +165,16 @@
   <div class="zona zona4" id= "video"  onclick="dropZ('video')">
     <p class="titulo_zona"> Video </p>
   </div>
+  <div class= "elemento Romanos12 video elemInactivo">
+   <div class="imgMusica" id="containerRomanos12"  onclick="ModalVideo('https://www.youtube.com//embed/FFc2G6-iy28?rel=0&showinfo=0&autoplay=1')">
+     <div class="containerTxt" id='txtRomanos12'>
+       <p class="txtMusica"> "Romanos 12"</p>
+       <p class="txtPeq"> Cámara y Edición </p>
+     </div>
+   </div>
+  </div>
   <div class= "elemento Temporales video elemInactivo">
-   <div class="imgMusica" id="containerTemp" style="cursor: pointer;" onclick="ModalVideo('https://www.youtube.com//embed/ubvK5Z4ICJw?rel=0&showinfo=0&autoplay=1')">
+   <div class="imgMusica" id="containerTemp"  onclick="ModalVideo('https://www.youtube.com//embed/ubvK5Z4ICJw?rel=0&showinfo=0&autoplay=1')">
      <div class="containerTxt" id='txtTemp'>
        <p class="txtMusica"> "Temporales"</p>
        <p class="txtPeq"> Cámara y Edición </p>
@@ -146,7 +182,7 @@
    </div>
   </div>
   <div class= "elemento Tokio video elemInactivo">
-   <div class="imgMusica" id="containerTokio" style="cursor: pointer;" onclick="ModalVideo('https://www.youtube.com//embed/B8qGCgKWebI?rel=0&showinfo=0&autoplay=1')">
+   <div class="imgMusica" id="containerTokio"  onclick="ModalVideo('https://www.youtube.com//embed/B8qGCgKWebI?rel=0&showinfo=0&autoplay=1')">
      <div class="containerTxt" id='txtTokio'>
        <p class="txtMusica"> "Tokio"</p>
        <p class="txtPeq"> Dirección, Cámara y Edición </p>
@@ -154,7 +190,7 @@
    </div>
   </div>
   <div class= "elemento Dic13 video elemInactivo">
-   <div class="imgMusica" id="containerDic13" style="cursor: pointer;" onclick="ModalVideo('https://www.youtube.com//embed/f_n90a8xTfQ?rel=0&showinfo=0&autoplay=1')">
+   <div class="imgMusica" id="containerDic13"  onclick="ModalVideo('https://www.youtube.com//embed/f_n90a8xTfQ?rel=0&showinfo=0&autoplay=1')">
      <div class="containerTxt" id='txtDic13'>
        <p class="txtMusica"> "Imaginación"</p>
        <p class="txtPeq"> Dirección, Cámara y Edición </p>
@@ -169,7 +205,7 @@
 
   <div class= "elemento adaptacion guion elemInactivo">
       <div class="imgMusica" id="containerSueno" >
-        <img class="imgPdf" id="imgPdfSueno" style="cursor: pointer;" onclick="ModalPdf('Proyectos/Guion/Sueno_adaptacion.pdf')" src="css/img/imgPdf.png"></img>
+        <img class="imgPdf" id="imgPdfSueno"  onclick="ModalPdf('Proyectos/Guion/Sueno_adaptacion.pdf')" src="css/img/imgPdf.png"></img>
         <div class="containerTxt" id='txtSueno'>
           <p class="txtMusica"> "Sueño"</p>
           <p class="txtPeq"> Adaptación a cortometraje</p>
@@ -178,7 +214,7 @@
   </div>
   <div class= "elemento insectos guion elemInactivo">
     <div class="imgMusica" id="containerInsec">
-      <img class="imgPdf" id="imgPdfInsec" style="cursor: pointer;" onclick="ModalPdf('Proyectos/Guion/Insectos_preview.pdf')" src="css/img/imgPdf.png"></img>
+      <img class="imgPdf" id="imgPdfInsec"  onclick="ModalPdf('Proyectos/Guion/Insectos_preview.pdf')" src="css/img/imgPdf.png"></img>
       <div class="containerTxt" id='txtInsec'>
         <p class="txtMusica">"Insectos"</p>
         <p class="txtPeq"> Guión Original (vista previa) </p>

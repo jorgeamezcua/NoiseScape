@@ -44,6 +44,21 @@ function togglePlayBass() {
       document.getElementById('imgPlayBass').src = "./css/img/play_musica.png";
   };
 };
+function togglePlayGen() {
+  var audio = document.getElementById('AudioGen');
+
+  if (audio.duration > 0 && !audio.paused) {
+
+      document.getElementById('imgPlayGen').src = "./css/img/play_musica.png";
+      audio.pause();
+  } else{
+    document.getElementById('imgPlayGen').src = "./css/img/pausa_musica.png";
+      audio.play();
+  }
+  audio.onended = function() {
+      document.getElementById('imgPlayGen').src = "./css/img/play_musica.png";
+  };
+};
 function dropZ(){};
 /*----Modal PDFs----*/
 if(document.documentElement.clientWidth > 1024) {
@@ -94,19 +109,19 @@ window.onload = function(){
 
 function WidthChange(mq) {
   if (mq.matches){
-    $("#animacion, .animacion").one("mouseover", function() {
+    $("#animacion").one("mouseover", function() {
       $('.animacion').addClass('permahover');
     });
-    $("#audio, .audio").one("mouseover", function() {
+    $("#audio").one("mouseover", function() {
       $('.audio').addClass('permahover');
     });
-    $("#musica, .musica").one("mouseover", function() {
+    $("#musica").one("mouseover", function() {
       $('.musica').addClass('permahover');
     });
-    $("#video, .video").one("mouseover", function() {
+    $("#video").one("mouseover", function() {
       $(".video").addClass('permahover');
     });
-    $("#guion, .guion").one("mouseover", function() {
+    $("#guion").one("mouseover", function() {
       $('.guion').addClass('permahover');
     });
     $(".yo").one("mouseover", function() {
@@ -122,7 +137,7 @@ var mq = window.matchMedia('(min-width:1025px)');
 
 
 if(document.documentElement.clientWidth < 1025) {
-  
+
   function ModalVideo(ruta = ''){
   var embedVideo = document.getElementById('embedVideo');
   var modalVideo = document.getElementById('modalVideo');
