@@ -34,205 +34,166 @@
 <source src="Proyectos/Musica/Genera/TemaGenera.mp3"></audio>
   <source src="Proyectos/Musica/Genera/TemaGenera.ogg"></audio>
 
+<!-- GRID para Desktop, FLEX para móvil-->
 <div class="background">
-<div class="grid flexbox"><!-- GRID para Desktop, FLEX para móvil-->
+  </div>
+<div class="grid flexbox">
 
   <div class="containerTxt" id="headerMovil">
       <a href="Proyectos/CV_JorgeAmezcua.pdf" download> <img  id="imgInfo"           src="css/img/imgCV.png"></img></a>
       <img  id="imgMailContacto"  onclick ="ModalWeb('https://docs.google.com/forms/d/e/1FAIpQLScjpJAEJI6U0pKgUK6hy50irymltAYDhxDWSlId_mRVFwdEHw/viewform?embedded=true')" src="css/img/mail.png"></img>
-      <p class="txtMusica" id= "yo"> Jorge Amezcua </p>
-      <p class="txtPeq descripYo"> <br> Ing. en Producción Musical Digital <br> Tec de Monterrey CCM </p>
+      <p class="txtBold" id= "yo"> Jorge Amezcua </p>
+      <p class="txt descripYo"> <br> Ing. en Producción Musical Digital <br> Tec de Monterrey CCM </p>
   </div>
-  <div class= "elementoCh ing yo">
-      <div class="containerTxt" id='containerIng' onclick ="ModalPdf('Proyectos/CV_JorgeAmezcua.pdf')">
-        <p class="txtMusica" id= "yo"> Jorge Amezcua </p>
-        <p class="txtPeq carrera"> <br> Ing. en Producción Musical Digital </p>
-        <p class="txtPeq"> Tec de Monterrey CCM </p>
+  <div class= "elementoYo Yo" id="containerIng" onclick ="ModalPdf('Proyectos/CV_JorgeAmezcua.pdf')">
+      <div class="containerTxt">
+        <p class="Titulo"> Jorge Amezcua
+        <p class="txt"> <br> Ing. en Producción Musical Digital </p>
+        <p class="txt"> Tec de Monterrey CCM <br><br></p>
       </div>
   </div>
-  <div class= "elementoCh contacto yo">
-    <div class="imgMusica" id="containerContacto" style="cursor: pointer;" onclick ="ModalContacto('https://docs.google.com/forms/d/e/1FAIpQLScjpJAEJI6U0pKgUK6hy50irymltAYDhxDWSlId_mRVFwdEHw/viewform?embedded=true')">
-      <img class="imgPdf" id="imgMailContacto" src="css/img/mail.png"></img>
-      <div class="containerTxt" id='txtContac'>
-        <p class="txtMusica"> Contacto </p>
-      </div>
-    </div>
-  </div>
-  <div class= "elementoCh Perfil yo">
-      <div class="containerTxt" id='containerPerfil'>
-        <p class="txtMusica" id= "yo"> Perfil </p>
-        <p class="txtPeq carrera"> <br> Productor audiovisual con habilidades de animación gráfica y diseño web responsivo. </p>
+  <div class= "elementoYo Yo" id="Contacto" style="cursor: pointer;" onclick ="ModalContacto('https://docs.google.com/forms/d/e/1FAIpQLScjpJAEJI6U0pKgUK6hy50irymltAYDhxDWSlId_mRVFwdEHw/viewform?embedded=true')">
+      <img class="imgPdf" src="css/img/mail.png"></img>
+      <div class="containerTxt">
+        <p class="txtBold"> Contacto </p>
       </div>
   </div>
   <!--TITULOS-->
-  <div class="zona zona1" id= "audio" onclick="dropZ('audio')">
+  <div class="zona" id= "zona1" onclick="dropZ('zona1','audio')">
     <p class="titulo_zona"> Audio </p>
   </div>
-  <div class= "elemento app audio elemInactivo">
-    <div class="imgMusica" id="containerApp"  onclick ="ModalWeb('Proyectos/NoiseScape/index.html')">
-      <div class="containerTxt" id="txtApp">
-        <p class="txtMusica"> NoiseScape web app </p>
-        <p class="txtPeq">  Programación y diseño </p>
+  <div class= "elemento audio elemInactivo" id="app" onclick ="ModalWeb('Proyectos/NoiseScape/index.html')">
+      <div class="containerTxt">
+        <p class="txtBold"> NoiseScape web app </p>
+        <p class="txt">  Programación y diseño </p>
       </div>
-    </div>
   </div>
 
 
-  <div class="zona zona2" id= "animacion" onclick="dropZ('animacion')">
+  <div class="zona" id= "zona2" onclick="dropZ('zona2','animacion')">
     <p class="titulo_zona"> Animación </p>
   </div>
-  <div class= "elemento Noise animacion elemInactivo">
-     <div class="imgMusica" id="containerNoise"  onclick="ModalVideo('https://www.youtube.com//embed/cCb1HM0_CVs?rel=0&showinfo=0&autoplay=1')">
-       <div class="containerTxt" id='txtNoise'>
-         <p class="txtMusica"> Teaser: Noise</p>
-         <p class="txtPeq"> Animación y Diseño </p>
-       </div>
-     </div>
-  </div>
-  <div class="elemento Genera animacion elemInactivo">
-    <div class="imgMusica" id="containerGen"     onclick="ModalVideo('https://www.youtube.com/embed/_yAN6LV13II?rel=0&showinfo=0&autoplay=1')">
-      <div class="containerTxt" id="txtGen">
-         <p class="txtMusica"> Genera</p>
-         <p class="txtPeq"> Animación y Edición </p>
+  <div class="elemento animacion elemInactivo" id="DBmenos" onclick="ModalVideo('https://youtube.com/embed/ZgBb_mTJN-w?rel=0&showinfo=0&autoplay=1')">
+      <div class="containerTxt" id="txtDBMenos">
+         <p class="txtBold"> DB Menos</p>
+         <p class="txt"> Animación y Edición </p>
       </div>
-    </div>
   </div>
-  <div class="elemento DBmenos animacion elemInactivo">
-    <div class="imgMusica" id="containerDBmenos"   onclick="ModalVideo('https://youtube.com/embed/ZgBb_mTJN-w?rel=0&showinfo=0&autoplay=1')">
-
-    <div class="containerTxt" id="txtDBMenos">
-       <p class="txtMusica"> DB Menos</p>
-       <p class="txtPeq"> Animación y Edición </p>
-    </div>
-   </div>
+  <div class= "elemento animacion elemInactivo" id="Noise" onclick="ModalVideo('https://www.youtube.com//embed/cCb1HM0_CVs?rel=0&showinfo=0&autoplay=1')">
+       <div class="containerTxt">
+         <p class="txtBold"> Teaser: Noise</p>
+         <p class="txt"> Animación y Diseño </p>
+       </div>
+  </div>
+  <div class="elemento animacion elemInactivo" id="Genera" onclick="ModalVideo('https://www.youtube.com/embed/_yAN6LV13II?rel=0&showinfo=0&autoplay=1')">
+      <div class="containerTxt" id="txtGen">
+         <p class="txtBold"> Genera</p>
+         <p class="txt"> Animación y Edición </p>
+      </div>
   </div>
 
 
-
-  <div class="zona zona3" id= "musica" onclick="dropZ('musica')">
+  <div class="zona" id= "zona3" onclick="dropZ('zona3','musica')">
     <p class="titulo_zona"> Música </p>
   </div>
-  <div class= "elemento jazz musica elemInactivo">
-    <div class="imgMusica" id="containerJ">
+  <div class= "elemento musica elemInactivo" id="jazz">
       <img class="imgPlayM" id="imgPlayJazz" src="css/img/play_musica.png"
        onclick="togglePlayJazz()">
       </img>
-      <img class="imgPdf" id="imgPdfJazz"  onclick ="ModalPdf('Proyectos/Musica/Excitement/Excitement_JorgeAmezcua.pdf')" src="css/img/score.png"></img>
-      <div class="containerTxt" id='txtJ'>
-        <p class="txtMusica"> "Excitement"</p>
-        <p class="txtPeq"> Composición original </p>
+      <img class="imgPdf" onclick ="ModalPdf('Proyectos/Musica/Excitement/Excitement_JorgeAmezcua.pdf')" src="css/img/score.png"></img>
+      <div class="containerTxt txtMusica">
+        <p class="txtBold"> "Excitement"</p>
+        <p class="txt"> Composición original </p>
       </div>
-    </div>
   </div>
-  <div class= "elemento solil musica elemInactivo">
-   <div class="imgMusica" id="containerSol">
-     <img class="imgPlayM" id="imgPlaySolil" src="css/img/play_musica.png"
+  <div class= "elemento musica elemInactivo" id="solil">
+      <img class="imgPlayM" id="imgPlaySolil" src="css/img/play_musica.png"
       onclick="togglePlaySolil()">
-   </img>
-     <img class="imgPdf" id="imgPdfSolil"  onclick="ModalPdf('Proyectos/Musica/Soliloquio/Soliloquio.pdf')" src="css/img/score.png"></img>
-     <div class="containerTxt" id='txtSol'>
-       <p class="txtMusica"> "Soliloquio"</p>
-       <p class="txtPeq"> Arreglo orquestal </p>
-    </div>
-   </div>
+      </img>
+       <img class="imgPdf"  onclick="ModalPdf('Proyectos/Musica/Soliloquio/Soliloquio.pdf')" src="css/img/score.png"></img>
+       <div class="containerTxt txtMusica">
+         <p class="txtBold"> "Soliloquio"</p>
+         <p class="txt"> Arreglo orquestal </p>
+      </div>
   </div>
 
-  <div class= "elemento musicGen musica elemInactivo">
-    <div class="imgMusica" id="containerMusicGen">
+  <div class= "elemento musica elemInactivo" id="musicGen">
       <img class="imgPlayM" id="imgPlayGen" src="css/img/play_musica.png"
        onclick="togglePlayGen()">
       </img>
-      <div class="containerTxt" id='txtMusicGen'>
-        <p class="txtMusica"> "Tema Genera"</p>
-        <p class="txtPeq"> Composición original </p>
+      <div class="containerTxt txtMusica">
+        <p class="txtBold"> "Tema Genera"</p>
+        <p class="txt"> Composición original </p>
       </div>
-    </div>
   </div>
 
-  <div class= "elemento Bass musica elemInactivo">
-    <div class="imgMusica" id="containerBass">
+  <div class= "elemento musica elemInactivo" id="Bass">
       <img class="imgPlayM" id="imgPlayBass" src="css/img/play_musica.png"
        onclick="togglePlayBass()">
       </img>
-      <div class="containerTxt" id='txtBass'>
-        <p class="txtMusica"> "Night n' Bass"</p>
-        <p class="txtPeq"> Composición original </p>
+      <div class="containerTxt txtMusica">
+        <p class="txtBold"> "Night n' Bass"</p>
+        <p class="txt"> Composición original </p>
       </div>
-    </div>
   </div>
 
 
-  <div class="zona zona4" id= "video"  onclick="dropZ('video')">
+  <div class="zona" id= "zona4"  onclick="dropZ('zona4','video')">
     <p class="titulo_zona"> Video </p>
   </div>
-  <div class= "elemento Romanos12 video elemInactivo">
-   <div class="imgMusica" id="containerRomanos12"  onclick="ModalVideo('https://www.youtube.com//embed/FFc2G6-iy28?rel=0&showinfo=0&autoplay=1')">
+  <div class= "elemento  video elemInactivo" id="Romanos12"  onclick="ModalVideo('https://www.youtube.com//embed/FFc2G6-iy28?rel=0&showinfo=0&autoplay=1')">
      <div class="containerTxt" id='txtRomanos12'>
-       <p class="txtMusica"> "Romanos 12"</p>
-       <p class="txtPeq"> Cámara y Edición </p>
+       <p class="txtBold"> "Romanos 12"</p>
+       <p class="txt"> Cámara y Edición </p>
      </div>
-   </div>
   </div>
-  <div class= "elemento Temporales video elemInactivo">
-   <div class="imgMusica" id="containerTemp"  onclick="ModalVideo('https://www.youtube.com//embed/ubvK5Z4ICJw?rel=0&showinfo=0&autoplay=1')">
-     <div class="containerTxt" id='txtTemp'>
-       <p class="txtMusica"> "Temporales"</p>
-       <p class="txtPeq"> Cámara y Edición </p>
+  <div class= "elemento video elemInactivo" id="Temporales" onclick="ModalVideo('https://www.youtube.com//embed/ubvK5Z4ICJw?rel=0&showinfo=0&autoplay=1')">
+     <div class="containerTxt">
+       <p class="txtBold"> "Temporales"</p>
+       <p class="txt"> Cámara y Edición </p>
      </div>
-   </div>
   </div>
-  <div class= "elemento Tokio video elemInactivo">
-   <div class="imgMusica" id="containerTokio"  onclick="ModalVideo('https://www.youtube.com//embed/B8qGCgKWebI?rel=0&showinfo=0&autoplay=1')">
-     <div class="containerTxt" id='txtTokio'>
-       <p class="txtMusica"> "Tokio"</p>
-       <p class="txtPeq"> Dirección, Cámara y Edición </p>
+  <div class= "elemento video elemInactivo" id="Tokio" onclick="ModalVideo('https://www.youtube.com//embed/B8qGCgKWebI?rel=0&showinfo=0&autoplay=1')">
+     <div class="containerTxt">
+       <p class="txtBold"> "Tokio"</p>
+       <p class="txt"> Dirección, Cámara y Edición </p>
      </div>
-   </div>
   </div>
-  <div class= "elemento Dic13 video elemInactivo">
-   <div class="imgMusica" id="containerDic13"  onclick="ModalVideo('https://www.youtube.com//embed/f_n90a8xTfQ?rel=0&showinfo=0&autoplay=1')">
-     <div class="containerTxt" id='txtDic13'>
-       <p class="txtMusica"> "Imaginación"</p>
-       <p class="txtPeq"> Dirección, Cámara y Edición </p>
+  <div class= "elemento video elemInactivo" id="Dic13" onclick="ModalVideo('https://www.youtube.com//embed/f_n90a8xTfQ?rel=0&showinfo=0&autoplay=1')">
+     <div class="containerTxt">
+       <p class="txtBold"> "Imaginación"</p>
+       <p class="txt"> Dirección, Cámara y Edición </p>
      </div>
-   </div>
   </div>
 
 
-  <div class="zona zona5" id= "guion"  onclick="dropZ('guion')">
+  <div class="zona" id= "zona5"  onclick="dropZ('zona5','guion')">
     <p class="titulo_zona"> Guión </p>
   </div>
 
-  <div class= "elemento adaptacion guion elemInactivo">
-      <div class="imgMusica" id="containerSueno" >
-        <img class="imgPdf" id="imgPdfSueno"  onclick="ModalPdf('Proyectos/Guion/Sueno_adaptacion.pdf')" src="css/img/imgPdf.png"></img>
-        <div class="containerTxt" id='txtSueno'>
-          <p class="txtMusica"> "Sueño"</p>
-          <p class="txtPeq"> Adaptación a cortometraje</p>
+  <div class= "elemento guion elemInactivo" id="adaptacion">
+        <img class="imgPdf" onclick="ModalPdf('Proyectos/Guion/Sueno_adaptacion.pdf')" src="css/img/imgPdf.png"></img>
+        <div class="containerTxt">
+          <p class="txtBold"> "Sueño"</p>
+          <p class="txt"> Adaptación a cortometraje</p>
       </div>
-    </div>
   </div>
-  <div class= "elemento insectos guion elemInactivo">
-    <div class="imgMusica" id="containerInsec">
-      <img class="imgPdf" id="imgPdfInsec"  onclick="ModalPdf('Proyectos/Guion/Insectos_preview.pdf')" src="css/img/imgPdf.png"></img>
-      <div class="containerTxt" id='txtInsec'>
-        <p class="txtMusica">"Insectos"</p>
-        <p class="txtPeq"> Guión Original (vista previa) </p>
+  <div class= "elemento guion elemInactivo" id="insectos">
+    <img class="imgPdf" onclick="ModalPdf('Proyectos/Guion/Insectos_preview.pdf')" src="css/img/imgPdf.png"></img>
+      <div class="containerTxt">
+        <p class="txtBold">"Insectos"</p>
+        <p class="txt"> Guión Original (vista previa) </p>
       </div>
-    </div>
   </div>
 
-  <div class= "elementoCh diseño yo">
-    <div class="imgMusica" id='containerDisen'>
-      <img class="imgPdf" id="imgDisen" src="css/img/imgDisen.png"></img>
-      <div class="containerTxt" id="txtDisen">
-       <p class="txtPeq"> Diseño y programación: <br> Jorge Amezcua</p>
+  <div class= "elementoYo Yo" id="diseño">
+      <img class="imgPdf" src="css/img/imgDisen.png"></img>
+      <div class="containerTxt">
+       <p class="txt"> Diseño y programación: <br> Jorge Amezcua</p>
       </div>
-    </div>
   </div>
+</div>
 
-</div>
-</div>
 
 <!---MODALES---->
     <div id="modalPdf" class="modal">
@@ -251,7 +212,7 @@
 
     <div id="modalWeb" class="modal">
     <div class="modal-content" id="contentContacto">
-    <!--<span class="close">&times;</span>-->
+    <span class="close">&times;</span>
     <iframe class="embedContacto" id="embedWeb" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0">Cargando...</iframe>
     </div>
     </div>

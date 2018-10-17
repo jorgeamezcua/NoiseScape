@@ -2,14 +2,17 @@
 html{
   height:100%;
 }
-@keyframes opacityZonas {
+@keyframes opacity_bkg {
     0% {opacity: 0;}
-    25% {opacity: 0;}
-    100% {opacity:0.7;}
+    40% {opacity: 0;}
+    100% {opacity:1;}
+}
+@keyframes opacityInicio {
+    0% {opacity: 0;}
+    100% {opacity:1;}
 }
 @keyframes opacity {
     0% {opacity: 0;}
-    25% {opacity: 0;}
     100% {opacity:1;}
 }
 @keyframes height {
@@ -48,63 +51,24 @@ html{
 .background{
   width: 100%;
   height:100%;
-}
-
-body{
+  position: fixed;
+  z-index: -1;
   background-image: url("img/Blue-And-Green.jpg");
   background-attachment: fixed;
   background-position: center;
   animation-name: opacity_bkg;
   animation-duration: 2s;
   animation-fill-mode: forwards;
+}
+
+body{
   margin: 0 auto;
   padding: 0;
   height:100%;
 }
 
-.imgMusica{
-  width: 90%;
-  height: 90%;
-  max-height:95%;
-  margin: auto auto;
-}
-/*-----IMAGENES y TXT general------*/
-.imgPlayM{
-  max-width: 95%;
-  max-height: 85%;
-  display: inline-flex;
-  border-radius: 5px;
-  align-self: center;
-  justify-self: center;
-}
 
-.imgPdf{
-  max-width: 95%;
-  max-height: 85%;
-  display: inline-flex;
-  align-self: center;
-  justify-self: center;
-}
-.txtMusica{
-  text-align: center;
-  font-size: 1em;
-  margin-top: 0;
-  margin-bottom: auto;
-}
-.txtMedio{
-  text-align: center;
-  font-size: 0.8em;
-  margin-top: 0;
-  margin-bottom: auto;
-}
-.txtPeq{
-  text-align: center;
-  font-size: 0.8em;
-  margin-top: auto;
-  margin-bottom: auto;
-}
 /*---GRID general----*/
-
 .flexbox{
   width: 100%;
   height: 90%;
@@ -119,229 +83,196 @@ body{
   width: 100%;
   height: 15%;
   margin: 0 auto;
-
   justify-content: center;
   align-items: center;
+  opacity: 0;
+  animation-name: opacityInicio;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
 }
 
+.elemento, .elementoYo{
+  display: none;
+  flex-direction: column;
+  margin:5px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  justify-content:flex-end;
+}
+.containerTxt{
+  color: white;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.5em;
+  margin: 40px auto;
+}
+.elemInactivo{
+  animation-name: heightOff;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
 @media screen and (orientation: portrait) {
-  .elemento{
-    display: none;
+  .elemento, .elementoYo{
     width: 90%;
     height: 380px;
     min-height: 45%;
-    flex-direction: column;
-    margin:5px;
     opacity: 0;
-    border-radius: 5px;
   }
   .elemActivo{
     animation-name: height;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
-  }
-  .elemInactivo{
-    animation-name: heightOff;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-  }
-  .containerTxt{
-    color: white;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 6vw;
-    align-self: center;
   }
 }
 @media screen and (orientation: landscape) {
-  .elemento{
-    display: none;
+  .zona{
+    height: 25%;
+  }
+  .titulo_zona{
+    margin-top: 10px;
+  }
+  .elemento, .elementoYo{
     width: 312px;
     height: 0;
-    flex-direction: column;
-    margin:5px;
     opacity: 1;
     border-radius: 5px;
-  }
-  .elemActivo{
-    display: flex;
-    animation-name: height;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
   }
   .elemActivo >div{
     height: 250px;
   }
-  .elementoCh{
+  .elementoYo{
     width: 60%;
     min-height: 25%;
     display: flex;
     flex-direction: column;
     margin:5px;
     opacity: 1;
-    border-radius: 5px;
   }
   .containerTxt{
     color: white;
     font-family: 'Source Sans Pro', sans-serif;
-    font-size: 5vw;
-    align-self: center;
+    font-size: 1.5em;
+    margin: 0 40px 0 0;
   }
-}
-.zona1{
-  background-color: #00668d;
-  color:#02b6fb;
-}
-.zona2{
-  background-color: #008469;
-  color:#27cead;
-}
-.zona3{
-  background-color: #529f32;
-  color:#89e93d;
-}
-.zona4{
-  background-color: #8ab925;
-  color:#4c6f00;
-}
-.zona5{
-  background-color: #c1d029;
-  color:#768100;
-}
 
+}
 .titulo_zona{
   font-family: 'Source Sans Pro';
   font-weight: bold;
   font-size: 6vw;
   margin-left: 15px;
+  text-align: center;
+}
+.musica{
+  flex-direction: row;
+  justify-content: center;
+}
+.txtMusica{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.imgPlayM{
+  max-height: 55%;
+  margin-top: 15px;
 }
 
+.imgPdf{
+  max-height: 55%;
+  margin-top: 15px;
+}
+.Titulo{
+  text-align: center;
+  font-size: 1.2em;
+  margin-top: 0;
+  margin-bottom: auto;
+}
+.txtBold{
+  text-align: center;
+  font-size: 0.9em;
+  margin-top: 0;
+  margin-bottom: auto;
+}
+.txt{
+  text-align: center;
+  font-size: 0.8em;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+#zona1{
+  background-color: #00668d;
+  color:#02b6fb;
+  animation-delay: 0s;
+}
+#zona2{
+  background-color: #008469;
+  color:#27cead;
+  animation-delay: 0.2s;
+}
+#zona3{
+  background-color: #529f32;
+  color:#89e93d;
+  animation-delay: 0.4s;
+}
+#zona4{
+  background-color: #8ab925;
+  color:#4c6f00;
+  animation-delay: 0.6s;
+}
+#zona5{
+  background-color: #c1d029;
+  color:#768100;
+  animation-delay: 0.8s;
+}
 
-/*----CLASES PRINCIPALES---*/
-.app{
+#app{
   background-image: url('img/imgNoiseScape.jpg');
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
-
-.adaptacion{
+#adaptacion{
   background: rgba(0,0,0,0.1);
 }
-.insectos{
+#insectos{
   background: rgba(0,0,0,0.1);
 }
-.ing{
+#ing{
   /*background: rgba(0,0,0,0.1);*/
   align-items: center;
 }
-.Genera{
-  background: rgba(0,0,0,0.2);
-}
-.Noise{
-  background-image: url("img/imgNoise.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.solil{
-  background: rgba(251,109,0,0.3);
-}
-.Bass{
-  background: rgba(251,109,0,0.3);
-}
-.jazz{
-  background: rgba(251,109,0,0.3);
-}
-.Temporales{
-  background-image: url("img/imgTemporales.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.Dic13{
-  background-image: url("img/imgDic13.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.Tokio{
-  background-image: url("img/imgTokio.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-
-
-/*----CONTAINERS, IMG y TXT individuales-----*/
-#containerGen{
-  height: 100%;
-  display:grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 75% 25%;
-  grid-template-areas: 'introGen videoGen''txtGen txtGen';
-}
-#containerGenIntro{
-  border-radius: 5px;
-  background-image: url("img/imgGen.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-#containerGenVid{
-  border-radius: 5px;
+#Genera{
   background-image: url("img/imgLeds.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
-#containerJ{
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 61.8% 38.2%;
-  grid-template-areas: 'playJ pdfJ''txtJ txtJ';
+#DBmenos{
+  background-image: url("img/imgDBmenos.png");
 }
-#containerSol{
-  display: grid;
-  grid-template-rows: 61.8% 38.2%;
-  grid-template-areas: 'playSol pdfSol''txtSol txtSol';
+#Noise{
+  background-image: url("img/imgNoise.jpg");
 }
-#containerBass{
-  display: grid;
-  grid-template-rows: 61.8% 38.2%;
-  grid-template-areas: 'playBass''txtBass';
+#solil{
+  background: rgba(251,109,0,0.3);
 }
-#containerTemp{
-  display: grid;
-  grid-template-rows: 61.8% 38.2%;
-  grid-template-areas: 'playTemp''txtTemp';
+#Bass{
+  background: rgba(251,109,0,0.3);
 }
-#containerTokio{
-  display: grid;
-  grid-template-rows: 61.8% 38.2%;
-  grid-template-areas: 'playTokio''txtTokio';
+#musicGen{
+  background: rgba(251,109,0,0.3);
 }
-#containerDic13{
-  width: 100%;
-  display: grid;
-  grid-template-rows: 61.8% 38.2%;
-  grid-template-areas: 'playDic13''txtDic13';
+#jazz{
+  background: rgba(251,109,0,0.3);
 }
-#containerNoise{
-  display: grid;
-  grid-template-rows: 61.8% 38.2%;
-  grid-template-areas: 'playNoise''txtNoise';
+#Romanos12{
+  background-image: url("img/imgRomanos12.png");
 }
-#containerSueno{
-  display: grid;
-  grid-template-rows: 61.8% 38.2%;
-  grid-template-areas: 'pdfSueno''txtSueno';
+#Temporales{
+  background-image: url("img/imgTemporales.jpg");
 }
-#containerInsec{
-  display: grid;
-  grid-template-rows: 61.8% 38.2%;
-  grid-template-areas: 'pdfInsec''txtInsec';
+#Dic13{
+  background-image: url("img/imgDic13.jpg");
 }
+#Tokio{
+  background-image: url("img/imgTokio.jpg");
+}
+
 #containerIng{
   height:95%;
   width:95%;
@@ -361,7 +292,7 @@ body{
     'imgInfo  .  imgContac'
     'Jorge    Jorge  Jorge'
     'desc     desc   desc '
-    '. . .';
+    '. diseño .';
 }
 #imgMailContacto{
   float: right;
@@ -383,82 +314,28 @@ body{
   grid-area: desc;
   height: 100%;
 }
-#txtContac, .contacto, .ing{
+#contacto, #containerIng{
   display: none;
 }
-#containerDisen{
-  display: grid;
-  grid-template-rows: 50px 1fr;
-  grid-template-areas: 'imgDisen''txtDisen';
+#diseño{
+  grid-area: diseño;
+  align-items: center;
 }
-.diseño{
-  width: 100%;
+#imgPlay{
+
 }
-#txtDisen{
-  grid-area: txtDisen;
-}
-#imgDisen{
-  height:100%;
-  grid-area: imgDisen;
-}
-#containerApp{
-  display: grid;
-  grid-template-rows: 61.8% 38.2%;
-  grid-template-areas: 'imgApp''txtApp';
-}
-#txtApp{
-  grid-area:txtApp;
-}
-#imgPlayJazz{
-  grid-area:playJ;
-}
-#imgPlaySolil{
-  grid-area:playSol;
-}
-#imgPlayBass{
+#imgPlaySolo{
   grid-area:playBass;
   max-height: 75%;
   margin:0 auto;
 }
-#imgPdfInsec{
-  grid-area: pdfInsec;
-}
-#txtSueno{
-  grid-area: txtSueno;
-}
-#txtInsec{
-  grid-area: txtInsec;
-}
-#imgPdfJazz{
-  grid-area: pdfJ;
-}
-#imgPdfSolil{
-  grid-area: pdfSol;
-}
-#txtJ{
-  grid-area: txtJ;
-}
-#txtSol{
-  grid-area: txtSol;
-}
-#txtBass{
-  grid-area: txtBass;
-}
-#txtTemp{
-  grid-area: txtTemp;
-}
-#txtTokio{
-  grid-area: txtTokio;
-}
-#txtDic13{
-  grid-area: txtDic13;
-}
-#txtNoise{
-  grid-area: txtNoise;
-}
 #txtGen{
-  grid-area: txtGen;
-  align-self: center;
+  background: rgb(0,0,0);
+  background: radial-gradient(circle, rgba(0,0,0,0.3) 74%, rgba(255,255,255,0.01) 100%);
+}
+#txtDBMenos{
+  background: rgb(0,0,0);
+  background: radial-gradient(circle, rgba(0,0,0,0.3) 74%, rgba(255,255,255,0.01) 100%);
 }
 
 /**---------Modal------------*/
@@ -524,4 +401,10 @@ iframe{
 .embedVideo{
   height: 100%;
   width:100%;
+}
+
+span{
+  display: none;
+  width: 10%;
+  height: auto;
 }

@@ -3,94 +3,50 @@ html{
   height:100%;
 }
 
-@keyframes opacityZonas {
+@keyframes opacityInicio {
     0% {opacity: 0;}
-    25% {opacity: 0;}
     100% {opacity:1;}
 }
 @keyframes opacity {
     0% {opacity: 0;}
-    25% {opacity: 0;}
     100% {opacity:1;}
 }
 @keyframes opacity_bkg {
     0% {opacity: 0;}
-    25% {opacity: 0;}
+    40% {opacity: 0;}
     100% {opacity:1;}
 }
-
 .background{
   width: 100%;
   height:100%;
   background-image: url("img/Blue-And-Green.jpg");
   background-attachment: fixed;
   background-position: center;
+  position: fixed;
   animation-name: opacity_bkg;
-  animation-duration: 2s;
+  animation-duration: 3s;
   animation-fill-mode: forwards;
 }
-
 body{
   margin: 0 auto;
   padding: 0;
   height:100%;
 }
 
-.imgMusica{
-  width: 90%;
-  height:90%;
-  max-height:95%;
-  margin:5px auto;
-  object-fit: contain;
-  justify-content: center;
-}
-/*-----IMAGENES y TXT general------*/
-.imgPlayM{
-  max-width: 95%;
-  max-height: 95%;
-  display: inline-flex;
-  border-radius: 5px;
-  align-self: center;
-  justify-self: center;
-}
-.imgPdf{
-  max-width: 95%;
-  max-height: 95%;
-  display: inline-flex;
-  align-self: center;
-  justify-self: center;
-}
-.txtMusica{
-  text-align: center;
-  font-size: 1em;
-  margin-top: 0;
-  margin-bottom: auto;
-}
-.txtMedio{
-  text-align: center;
-  font-size: 0.8em;
-  margin-top: 0;
-  margin-bottom: auto;
-}
-.txtPeq{
-  text-align: center;
-  font-size: 0.8em;
-  margin-top: auto;
-  margin-bottom: auto;
-}
+
 /*---GRID general----*/
 .grid{
   width: 100%;
   height: 100%;
   display: grid;
   grid-template-columns: 20% 20% 20% 20% 20%;
-  grid-template-rows: 22% 22% 10% 22% 22%;
+  grid-template-rows: 22% 22% 11% 22% 22%;
   grid-template-areas:
  "yoIng    yoIng    jazz      Romanos12   contacto "
- "app      Noise    solil     Temporales  adaptacion "
+ "app      Noise    TemaGen   Temporales  adaptacion "
  "zona1    zona2    zona3     zona4       zona5 "
- "Genera    Genera   TemaGen   Tokio       insectos "
- "DBmenos    DBmenos  bass      dic13       diseño ";
+ "DBmenos  DBmenos  bass      Tokio       insectos "
+ "Genera   Genera   solil     dic13       diseño ";
 }
 
 .titulo_zona{
@@ -104,21 +60,60 @@ body{
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  animation-name: opacityZonas;
-  animation-duration: 0.5s;
+  animation-name: opacityInicio;
+  animation-duration: 2s;
   animation-fill-mode: forwards;
-  grid-row:4;
 }
 .containerTxt{
   color:white;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 1.5vw;
-  align-self: center;
+  display: inline-block;
+  margin: 10px 0px;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
 }
-.elemento, .elementoCh{
-  margin:5px;
+.elemento, .elementoYo{
+  margin:2px;
   opacity: 0;
+  border-radius: 0px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.imgPlayM{
+  height: 50%;
   border-radius: 5px;
+  margin-top: 15px;
+}
+.imgPdf{
+  height: 50%;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+.Titulo{
+  text-align: center;
+  font-size: 1.3em;
+  margin-top: 0;
+  margin-bottom: auto;
+}
+.txtBold{
+  font-weight:bolder;
+  text-align: center;
+  font-size: 0.9em;
+  margin-top: 0;
+  margin-bottom: auto;
+}
+.txt{
+  font-weight:200;
+  text-align: center;
+  font-size: 0.8em;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 .permahover{
   animation-name: opacity;
@@ -128,315 +123,131 @@ body{
 }
 
 /*----CLASES PRINCIPALES---*/
-.zona1{
+#zona1{
   grid-area: zona1;
   background-color: #00668d;
   color:#02b6fb;
 }
-.zona2{
+#zona2{
   grid-area: zona2;
   background-color: #008469;
   color:#27cead;
 }
-.zona3{
+#zona3{
   grid-area: zona3;
   background-color: #529f32;
   color:#89e93d;
 }
-.zona4{
+#zona4{
   grid-area: zona4;
   background-color: #8ab925;
   color:#4c6f00;
 }
-.zona5{
+#zona5{
   grid-area: zona5;
   background-color: #c1d029;
   color:#768100;
 }
-.adaptacion{
+
+#headerMovil{display: none;}
+
+#containerIng{
+  cursor: pointer;
+  grid-area: yoIng;
+  display: flex;
+  height:100%;
+  width:100%;
+  align-items: center;
+  background: rgba(0,0,0,0.05);
+}
+#Contacto{
+  grid-area: contacto;
+  background: rgba(0,0,0,0.05);
+}
+#adaptacion{
   grid-area: adaptacion;
   background: rgba(0,0,0,0.1);
 }
-.insectos{
+#insectos{
   grid-area: insectos;
   background: rgba(0,0,0,0.1);
 }
-.diseño{
+#diseño{
   grid-area: diseño;
-  /*background: rgba(0,0,0,0.1);*/
+  background: rgba(0,0,0,0.05);
   align-items: center;
+  cursor: default;
 }
-.ing{
-  cursor: pointer;
-  grid-area: yoIng;
-  /*background: rgba(0,0,0,0.1);*/
-  align-items: center;
-}
-.contacto{
-  grid-area: contacto;
-  /*background: rgba(0,0,0,0.1);*/
-}
-.Perfil{
-  grid-area: Perfil;
-  /*background: rgba(0,0,0,0.1);*/
-}
-.Genera{
-  background-image: url("img/imgLeds.jpg");
-  grid-area: Genera;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.DBmenos{
-  background-image: url("img/imgDBmenos.png");
-  grid-area: DBmenos;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.app{
-  grid-area: app;
-  background-image: url('img/imgNoiseScape.jpg');
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.Noise{
+#Noise{
   grid-area: Noise;
   background-image: url("img/imgNoise.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
-.solil{
-  grid-area: solil;
+#Genera{
+  background-image: url("img/imgLeds.jpg");
+  grid-area: Genera;
+  animation-delay: 0.1s;
+}
+#DBmenos{
+  background-image: url("img/imgDBmenos.png");
+  grid-area: DBmenos;
+}
+#app{
+  grid-area: app;
+  background-image: url('img/imgNoiseScape.jpg');
+}
+#jazz{
+  grid-area: jazz;
   background: rgba(251,109,0,0.3);
+  animation-delay: 0.1s;
 }
-.Bass{
-  grid-area: bass;
-  background: rgba(251,109,0,0.3);
-}
-.musicGen{
+#musicGen{
   grid-area: TemaGen;
   background: rgba(251,109,0,0.3);
 }
-.jazz{
-  grid-area: jazz;
+#Bass{
+  grid-area: bass;
   background: rgba(251,109,0,0.3);
 }
-.Romanos12{
+#solil{
+  grid-area: solil;
+  background: rgba(251,109,0,0.3);
+  animation-delay: 0.1s;
+}
+#Romanos12{
   grid-area: Romanos12;
   background-image: url("img/imgRomanos12.png");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  animation-delay: 0.1s;
 }
-.Temporales{
+#Temporales{
   grid-area: Temporales;
   background-image: url("img/imgTemporales.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
-.Dic13{
-  grid-area: dic13;
-  background-image: url("img/imgDic13.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.Tokio{
+#Tokio{
   grid-area: Tokio;
   background-image: url("img/imgTokio.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
+#Dic13{
+  grid-area: dic13;
+  background-image: url("img/imgDic13.jpg");
+  animation-delay: 0.1s;
+}
+#imgPlay{
 
+}
+#imgPlaySolo{
 
-
-/*----CONTAINERS, IMG y TXT individuales-----*/
-#headerMovil{display: none;}
-#containerIng{
-  height:95%;
-  width:95%;
-  max-height:95%;
-  margin:10px;
-  padding-top: 7%;
-  padding-bottom: 7%;
-}
-#containerPerfil{
-  height:95%;
-  width:95%;
-  max-height:95%;
-  margin:10px;
-  padding-top: 7%;
-  padding-bottom: 7%;
-}
-#containerGen{
-  display:grid;
-  grid-template-rows: 61.8% 38.2%;
-  grid-template-areas: 'videoGen''txtGen';
-}
-#containerDBmenos{
-  display:grid;
-  grid-template-rows: 61.8% 38.2%;
-  grid-template-areas: 'videoDBmenos''txtDBMenos';
-}
-#containerJ{
-  display: grid;
-  grid-template-rows: 61.8% 38.2%;
-  grid-template-areas: 'playJ pdfJ''txtJ txtJ';
-}
-#containerSol{
-  display: grid;
-  grid-template-rows: 61.8% 38.2%;
-  grid-template-areas: 'playSol pdfSol''txtSol txtSol';
-}
-#containerBass{
-  display: grid;
-  grid-template-rows: 61.8% 38.2%;
-  grid-template-areas: 'playBass''txtBass';
-}
-#containerMusicGen{
-  display: grid;
-  grid-template-rows: 61.8% 38.2%;
-  grid-template-areas: 'playGen''txtMusicGen';
-}
-#containerRomanos12{
-  display: grid;
-  grid-template-rows: 61.8% 38.2%;
-  grid-template-areas: 'playRomanos12''txtRomanos12';
-}
-#containerTemp{
-  display: grid;
-  grid-template-rows: 61.8% 38.2%;
-  grid-template-areas: 'playTemp''txtTemp';
-}
-#containerTokio{
-  display: grid;
-  grid-template-rows: 61.8% 38.2%;
-  grid-template-areas: 'playTokio''txtTokio';
-}
-#containerDic13{
-  display: grid;
-  grid-template-rows: 61.8% 38.2%;
-  grid-template-areas: 'playDic13''txtDic13';
-}
-#containerApp{
-  display: grid;
-  grid-template-rows: 61.8% 38.2%;
-  grid-template-areas: 'imgApp''txtApp';
-}
-#containerNoise{
-  display: grid;
-  grid-template-rows: 61.8% 38.2%;
-  grid-template-areas: 'playNoise''txtNoise';
-}
-#containerSueno{
-  display: grid;
-  grid-template-rows: 61.8% 38.2%;
-  grid-template-areas: 'pdfSueno''txtSueno';
-}
-#containerInsec{
-  display: grid;
-  grid-template-rows: 61.8% 38.2%;
-  grid-template-areas: 'pdfInsec''txtInsec';
-}
-#containerDisen{
-  display: grid;
-  grid-template-rows: 61.8% 38.2%;
-  grid-template-areas: 'imgDisen''txtDisen';
-}
-#txtDisen{
-  grid-area: txtDisen;
-}
-#imgDisen{
-  grid-area: imgDisen;
-}
-#containerContacto{
-  display: grid;
-  grid-template-rows: 68% 32%;
-  grid-template-areas: 'imgContac''txtContac';
-}
-#txtApp{
-  grid-area:txtApp;
-}
-#imgPlayJazz{
-  grid-area:playJ;
-}
-#imgPlayGen{
-  grid-area:playGen;
-}
-#imgPlaySolil{
-  grid-area:playSol;
-}
-#imgPlayBass{
-  grid-area:playBass;
   margin:0 auto;
 }
-#imgPdfInsec{
-  grid-area: pdfInsec;
-}
-#imgPdfSueno{
-  grid-area: pdfSueno;
-}
-#txtSueno{
-  grid-area: txtSueno;
-}
-#txtInsec{
-  grid-area: txtInsec;
-}
-#imgPdfJazz{
-  grid-area: pdfJ;
-}
-#imgPdfSolil{
-  grid-area: pdfSol;
-}
-#txtJ{
-  grid-area: txtJ;
-}
-#txtSol{
-  grid-area: txtSol;
-}
-#txtMusicGen{
-  grid-area: txtMusicGen;
-}
-#txtBass{
-  grid-area: txtBass;
-}
-#txtRomanos12{
-  grid-area: txtRomanos12;
-}
-#txtTemp{
-  grid-area: txtTemp;
-}
-#txtTokio{
-  grid-area: txtTokio;
-}
-#txtDic13{
-  grid-area: txtDic13;
-}
-#txtNoise{
-  grid-area: txtNoise;
-}
-#imgMailContacto{
-  grid-area: imgContac;
-}
-#txtContac{
-  grid-area: txtContac;
-  align-self: baseline;
-}
+
 #txtGen{
   grid-area: txtGen;
-  align-self: center;
   background: rgb(0,0,0);
-background: radial-gradient(circle, rgba(0,0,0,0.49343487394957986) 74%, rgba(255,255,255,0) 100%);
-
+  background: radial-gradient(circle, rgba(0,0,0,0.2) 74%, rgba(255,255,255,0) 100%);
 }
 #txtDBMenos{
   grid-area: txtDBMenos;
-  align-self: center;
+  background: rgb(0,0,0);
+  background: radial-gradient(circle, rgba(0,0,0,0.2) 74%, rgba(255,255,255,0) 100%);
 }
 
 
@@ -456,12 +267,12 @@ background: radial-gradient(circle, rgba(0,0,0,0.49343487394957986) 74%, rgba(25
 }
 /* Modal Content/Box */
 .modal-content {
-    background-color: #fefefe;
+    background-color: rgba(0,0,0,0);
     margin: 5% auto; /* 15% from the top and centered */
     padding: 0px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-    height: 80%;
+    border: 0px;
+    width:100%; /* Could be more or less, depending on screen size */
+    height: 100%;
 }
 .modal-video{
 
@@ -514,5 +325,6 @@ iframe{
   width:100%;
 }
 span{
-  display: none;
+  width: 10%;
+  height: auto;
 }

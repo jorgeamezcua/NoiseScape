@@ -109,23 +109,23 @@ window.onload = function(){
 
 function WidthChange(mq) {
   if (mq.matches){
-    $("#animacion").one("mouseover", function() {
+    $("#zona2").one("mouseover", function() {
       $('.animacion').addClass('permahover');
     });
-    $("#audio").one("mouseover", function() {
+    $("#zona1").one("mouseover", function() {
       $('.audio').addClass('permahover');
     });
-    $("#musica").one("mouseover", function() {
+    $("#zona3").one("mouseover", function() {
       $('.musica').addClass('permahover');
     });
-    $("#video").one("mouseover", function() {
+    $("#zona4").one("mouseover", function() {
       $(".video").addClass('permahover');
     });
-    $("#guion").one("mouseover", function() {
+    $("#zona5").one("mouseover", function() {
       $('.guion').addClass('permahover');
     });
-    $(".yo").one("mouseover", function() {
-      $('.yo').addClass('permahover');
+    $(".Yo").one("mouseover", function() {
+      $('.Yo').addClass('permahover');
     });
   } else{};
 };
@@ -194,14 +194,14 @@ if(document.documentElement.clientWidth < 1025) {
 
 /*-----desplegar zonas en touch-----*/
 
-function dropZ(claseID){
-  var z = document.getElementById(claseID);//identifica la zona
+function dropZ(zonaID,claseID){
+  var z = document.getElementById(zonaID);//identifica la zona
   var elementos = document.getElementsByClassName(claseID);//identifica elementos de esa zona
   if(z.classList.contains("activo")){ //si la zona está activa
     var i;
     for(i=0;i < elementos.length; i++) {
     z.classList.remove("activo"); //desactivar zona
-    elementos[i].classList.add("elemInactivo"); //poner inactiv
+    elementos[i].classList.add("elemInactivo"); //poner inactivo
     elementos[i].classList.remove("elemActivo"); //y desactivar elementos
   }
     setTimeout(function(){
