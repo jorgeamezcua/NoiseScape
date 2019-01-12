@@ -109,19 +109,19 @@ window.onload = function(){
 
 function WidthChange(mq) {
   if (mq.matches){
-    $("#zona2").one("mouseover", function() {
+    $("#Animacion").one("mouseover", function() {
       $('.animacion').addClass('permahover');
     });
-    $("#zona1").one("mouseover", function() {
+    $("#webAudio").one("mouseover", function() {
       $('.audio').addClass('permahover');
     });
-    $("#zona3").one("mouseover", function() {
+    $("#Musica").one("mouseover", function() {
       $('.musica').addClass('permahover');
     });
-    $("#zona4").one("mouseover", function() {
+    $("#Video").one("mouseover", function() {
       $(".video").addClass('permahover');
     });
-    $("#zona5").one("mouseover", function() {
+    $("#Guion").one("mouseover", function() {
       $('.guion').addClass('permahover');
     });
     $(".Yo").one("mouseover", function() {

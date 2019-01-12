@@ -200,27 +200,32 @@ body{
   margin-top: auto;
   margin-bottom: auto;
 }
-#zona1{
+#webAudio{
+  grid-area: webAudio;
   background-color: #00668d;
   color:#02b6fb;
   animation-delay: 0s;
 }
-#zona2{
+#Guion{
+  grid-area: Guion;
   background-color: #008469;
   color:#27cead;
   animation-delay: 0.2s;
 }
-#zona3{
+#Animacion{
+  grid-area: Animacion;
   background-color: #529f32;
   color:#89e93d;
   animation-delay: 0.4s;
 }
-#zona4{
+#Video{
+  grid-area: Video;
   background-color: #8ab925;
   color:#4c6f00;
   animation-delay: 0.6s;
 }
-#zona5{
+#Musica{
+  grid-area: Musica;
   background-color: #c1d029;
   color:#768100;
   animation-delay: 0.8s;
@@ -241,6 +246,10 @@ body{
 }
 #Genera{
   background-image: url("img/imgLeds.jpg");
+}
+#SitesGP{
+  background-image: url("img/imgSitesgp_movil.png");
+  grid-area: SitesGP;
 }
 #DBmenos{
   background-image: url("img/imgDBmenos.png");
@@ -336,6 +345,11 @@ body{
 #txtDBMenos{
   background: rgb(0,0,0);
   background: radial-gradient(circle, rgba(0,0,0,0.3) 74%, rgba(255,255,255,0.01) 100%);
+}
+#txtSitesGP{
+  grid-area: txtDBMenos;
+  background: rgb(0,0,0);
+  background: radial-gradient(circle, rgba(0,0,0,0.3) 74%, rgba(255,255,255,0) 100%);
 }
 
 /**---------Modal------------*/

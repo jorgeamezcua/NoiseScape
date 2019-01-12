@@ -39,14 +39,14 @@ body{
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-columns: 16% 21% 26% 21% 16%;
   grid-template-rows: 22% 22% 11% 22% 22%;
   grid-template-areas:
- "yoIng    yoIng    jazz      Romanos12   contacto "
- "app      Noise    TemaGen   Temporales  adaptacion "
- "zona1    zona2    zona3     zona4       zona5 "
- "DBmenos  DBmenos  bass      Tokio       insectos "
- "Genera   Genera   solil     dic13       diseño ";
+ "yoIng     yoIng          DBmenos   Romanos12   contacto "
+ "      SitesGP     SitesGP      SitesGP    Temporales jazz  "
+ "    webAudio  Guion        Animacion  Video   Musica     "
+ "   app       adaptacion   Genera    Tokio   TemaGen      "
+ "      app       insectos   Noise dic13       diseño     ";
 }
 
 .titulo_zona{
@@ -73,6 +73,15 @@ body{
   position: absolute;
   width: 100%;
   bottom: 0;
+}
+.containerTxtJorge{
+  color:white;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.5vw;
+  display: inline-block;
+  margin: 10px 0px;
+  position: absolute;
+  width: 100%;
 }
 .elemento, .elementoYo{
   margin:2px;
@@ -123,28 +132,28 @@ body{
 }
 
 /*----CLASES PRINCIPALES---*/
-#zona1{
-  grid-area: zona1;
+#webAudio{
+  grid-area: webAudio;
   background-color: #00668d;
   color:#02b6fb;
 }
-#zona2{
-  grid-area: zona2;
+#Guion{
+  grid-area: Guion;
   background-color: #008469;
   color:#27cead;
 }
-#zona3{
-  grid-area: zona3;
+#Animacion{
+  grid-area: Animacion;
   background-color: #529f32;
   color:#89e93d;
 }
-#zona4{
-  grid-area: zona4;
+#Video{
+  grid-area: Video;
   background-color: #8ab925;
   color:#4c6f00;
 }
-#zona5{
-  grid-area: zona5;
+#Musica{
+  grid-area: Musica;
   background-color: #c1d029;
   color:#768100;
 }
@@ -158,7 +167,8 @@ body{
   height:100%;
   width:100%;
   align-items: center;
-  background: rgba(0,0,0,0.05);
+  background: radial-gradient(ellipse, rgba(0,0,0,0.3) 20%,
+                                  rgba(255,255,255,0) 100%);
 }
 #Contacto{
   grid-area: contacto;
@@ -186,6 +196,10 @@ body{
   background-image: url("img/imgLeds.jpg");
   grid-area: Genera;
   animation-delay: 0.1s;
+}
+#SitesGP{
+  background-image: url("img/imgSitesgp.png");
+  grid-area: SitesGP;
 }
 #DBmenos{
   background-image: url("img/imgDBmenos.png");
@@ -230,6 +244,7 @@ body{
   grid-area: dic13;
   background-image: url("img/imgDic13.jpg");
   animation-delay: 0.1s;
+
 }
 #imgPlay{
 
@@ -249,6 +264,11 @@ body{
   background: rgb(0,0,0);
   background: radial-gradient(circle, rgba(0,0,0,0.2) 74%, rgba(255,255,255,0) 100%);
 }
+#txtSitesGP{
+  grid-area: txtDBMenos;
+  background: rgb(0,0,0);
+  background: radial-gradient(circle, rgba(0,0,0,0.3) 74%, rgba(255,255,255,0) 100%);
+}
 
 
 /**---------Modal------------*/
@@ -256,7 +276,7 @@ body{
 .modal {
     display: none;
     position: fixed;
-    z-index: 1;/
+    z-index: 1;
     left: 0;
     top: 0;
     width: 100%;
@@ -281,7 +301,7 @@ body{
     width: 80%;
     max-width: 1280px;
     height: 0;
-    padding-bottom: 56.25%;
+    padding-bottom: 40.25%;
 }
 .embedVideo {
     position: absolute;

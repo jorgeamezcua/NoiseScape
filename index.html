@@ -34,22 +34,21 @@
 <source src="Proyectos/Musica/Genera/TemaGenera.mp3"></audio>
   <source src="Proyectos/Musica/Genera/TemaGenera.ogg"></audio>
 
-<!-- GRID para Desktop, FLEX para móvil-->
+
 <div class="background">
   </div>
-<div class="grid flexbox">
+<div class="grid flexbox"> <!-- GRID para Desktop, FLEX para móvil-->
 
   <div class="containerTxt" id="headerMovil">
       <a href="Proyectos/CV_JorgeAmezcua.pdf" download> <img  id="imgInfo"           src="css/img/imgCV.png"></img></a>
       <img  id="imgMailContacto"  onclick ="ModalWeb('https://docs.google.com/forms/d/e/1FAIpQLScjpJAEJI6U0pKgUK6hy50irymltAYDhxDWSlId_mRVFwdEHw/viewform?embedded=true')" src="css/img/mail.png"></img>
       <p class="txtBold" id= "yo"> Jorge Amezcua </p>
-      <p class="txt descripYo"> <br> Ing. en Producción Musical Digital <br> Tec de Monterrey CCM </p>
+      <p class="txt descripYo"> <br> Productor Audiovisual  </p>
   </div>
   <div class= "elementoYo Yo" id="containerIng" onclick ="ModalPdf('Proyectos/CV_JorgeAmezcua.pdf')">
-      <div class="containerTxt">
+      <div class="containerTxtJorge">
         <p class="Titulo"> Jorge Amezcua
-        <p class="txt"> <br> Ing. en Producción Musical Digital </p>
-        <p class="txt"> Tec de Monterrey CCM <br><br></p>
+        <p class="txt"> <br> Productor Audiovisual </p>
       </div>
   </div>
   <div class= "elementoYo Yo" id="Contacto" style="cursor: pointer;" onclick ="ModalContacto('https://docs.google.com/forms/d/e/1FAIpQLScjpJAEJI6U0pKgUK6hy50irymltAYDhxDWSlId_mRVFwdEHw/viewform?embedded=true')">
@@ -59,24 +58,21 @@
       </div>
   </div>
   <!--TITULOS-->
-  <div class="zona" id= "zona1" onclick="dropZ('zona1','audio')">
-    <p class="titulo_zona"> Audio </p>
-  </div>
-  <div class= "elemento audio elemInactivo" id="app" onclick ="ModalWeb('Proyectos/NoiseScape/index.html')">
-      <div class="containerTxt">
-        <p class="txtBold"> NoiseScape web app </p>
-        <p class="txt">  Programación y diseño </p>
-      </div>
-  </div>
 
 
-  <div class="zona" id= "zona2" onclick="dropZ('zona2','animacion')">
+  <div class="zona" id= "Animacion" onclick="dropZ('Animacion','animacion')">
     <p class="titulo_zona"> Animación </p>
   </div>
-  <div class="elemento animacion elemInactivo" id="DBmenos" onclick="ModalVideo('https://youtube.com/embed/ZgBb_mTJN-w?rel=0&showinfo=0&autoplay=1')">
+  <div class="elemento animacion elemInactivo" id="DBmenos" onclick="ModalVideo('https://youtube.com/embed/1jdwgYvNED8?rel=0&showinfo=0&autoplay=1')">
       <div class="containerTxt" id="txtDBMenos">
          <p class="txtBold"> DB Menos</p>
          <p class="txt"> Animación y Edición </p>
+      </div>
+  </div>
+  <div class="elemento animacion elemInactivo" id="SitesGP" onclick="ModalVideo('https://youtube.com/embed/SJ-fCTGamrE?rel=0&showinfo=0&autoplay=1')">
+      <div class="containerTxt" id="txtSitesGP">
+         <p class="txtBold"> SitesGP</p>
+         <p class="txt"> Voz, Guión y Animación </p>
       </div>
   </div>
   <div class= "elemento animacion elemInactivo" id="Noise" onclick="ModalVideo('https://www.youtube.com//embed/cCb1HM0_CVs?rel=0&showinfo=0&autoplay=1')">
@@ -93,52 +89,8 @@
   </div>
 
 
-  <div class="zona" id= "zona3" onclick="dropZ('zona3','musica')">
-    <p class="titulo_zona"> Música </p>
-  </div>
-  <div class= "elemento musica elemInactivo" id="jazz">
-      <img class="imgPlayM" id="imgPlayJazz" src="css/img/play_musica.png"
-       onclick="togglePlayJazz()">
-      </img>
-      <img class="imgPdf" onclick ="ModalPdf('Proyectos/Musica/Excitement/Excitement_JorgeAmezcua.pdf')" src="css/img/score.png"></img>
-      <div class="containerTxt txtMusica">
-        <p class="txtBold"> "Excitement"</p>
-        <p class="txt"> Composición original </p>
-      </div>
-  </div>
-  <div class= "elemento musica elemInactivo" id="solil">
-      <img class="imgPlayM" id="imgPlaySolil" src="css/img/play_musica.png"
-      onclick="togglePlaySolil()">
-      </img>
-       <img class="imgPdf"  onclick="ModalPdf('Proyectos/Musica/Soliloquio/Soliloquio.pdf')" src="css/img/score.png"></img>
-       <div class="containerTxt txtMusica">
-         <p class="txtBold"> "Soliloquio"</p>
-         <p class="txt"> Arreglo orquestal </p>
-      </div>
-  </div>
 
-  <div class= "elemento musica elemInactivo" id="musicGen">
-      <img class="imgPlayM" id="imgPlayGen" src="css/img/play_musica.png"
-       onclick="togglePlayGen()">
-      </img>
-      <div class="containerTxt txtMusica">
-        <p class="txtBold"> "Tema Genera"</p>
-        <p class="txt"> Composición original </p>
-      </div>
-  </div>
-
-  <div class= "elemento musica elemInactivo" id="Bass">
-      <img class="imgPlayM" id="imgPlayBass" src="css/img/play_musica.png"
-       onclick="togglePlayBass()">
-      </img>
-      <div class="containerTxt txtMusica">
-        <p class="txtBold"> "Night n' Bass"</p>
-        <p class="txt"> Composición original </p>
-      </div>
-  </div>
-
-
-  <div class="zona" id= "zona4"  onclick="dropZ('zona4','video')">
+  <div class="zona" id= "Video"  onclick="dropZ('Video','video')">
     <p class="titulo_zona"> Video </p>
   </div>
   <div class= "elemento  video elemInactivo" id="Romanos12"  onclick="ModalVideo('https://www.youtube.com//embed/FFc2G6-iy28?rel=0&showinfo=0&autoplay=1')">
@@ -167,7 +119,7 @@
   </div>
 
 
-  <div class="zona" id= "zona5"  onclick="dropZ('zona5','guion')">
+  <div class="zona" id= "Guion"  onclick="dropZ('Guion','guion')">
     <p class="titulo_zona"> Guión </p>
   </div>
 
@@ -186,13 +138,70 @@
       </div>
   </div>
 
+  <div class="zona" id= "Musica" onclick="dropZ('Musica','musica')">
+    <p class="titulo_zona"> Música </p>
+  </div>
+  <div class= "elemento musica elemInactivo" id="jazz">
+      <img class="imgPlayM" id="imgPlayJazz" src="css/img/play_musica.png"
+       onclick="togglePlayJazz()">
+      </img>
+      <img class="imgPdf" onclick ="ModalPdf('Proyectos/Musica/Excitement/Excitement_JorgeAmezcua.pdf')" src="css/img/score.png"></img>
+      <div class="containerTxt txtMusica">
+        <p class="txtBold"> "Excitement"</p>
+        <p class="txt"> Composición original </p>
+      </div>
+  </div>
+
+  <div class= "elemento musica elemInactivo" id="musicGen">
+      <img class="imgPlayM" id="imgPlayGen" src="css/img/play_musica.png"
+       onclick="togglePlayGen()">
+      </img>
+      <div class="containerTxt txtMusica">
+        <p class="txtBold"> "Tema Genera"</p>
+        <p class="txt"> Composición original </p>
+      </div>
+  </div>
+<!--
+  <div class= "elemento musica elemInactivo" id="solil">
+      <img class="imgPlayM" id="imgPlaySolil" src="css/img/play_musica.png"
+      onclick="togglePlaySolil()">
+      </img>
+       <img class="imgPdf"  onclick="ModalPdf('Proyectos/Musica/Soliloquio/Soliloquio.pdf')" src="css/img/score.png"></img>
+       <div class="containerTxt txtMusica">
+         <p class="txtBold"> "Soliloquio"</p>
+         <p class="txt"> Arreglo orquestal </p>
+      </div>
+  </div>
+  <div class= "elemento musica elemInactivo" id="Bass">
+      <img class="imgPlayM" id="imgPlayBass" src="css/img/play_musica.png"
+       onclick="togglePlayBass()">
+      </img>
+      <div class="containerTxt txtMusica">
+        <p class="txtBold"> "Night n' Bass"</p>
+        <p class="txt"> Composición original </p>
+      </div>
+  </div>
+-->
+
+
+  <div class="zona" id= "webAudio" onclick="dropZ('webAudio','audio')">
+    <p class="titulo_zona"> Web & Audio </p>
+  </div>
+  <div class= "elemento audio elemInactivo" id="app" onclick ="ModalWeb('Proyectos/NoiseScape/index.html')">
+      <div class="containerTxt">
+        <p class="txtBold"> NoiseScape web app </p>
+        <p class="txt">  Programación y diseño </p>
+      </div>
+  </div>
+
   <div class= "elementoYo Yo" id="diseño">
       <img class="imgPdf" src="css/img/imgDisen.png"></img>
       <div class="containerTxt">
        <p class="txt"> Diseño y programación: <br> Jorge Amezcua</p>
       </div>
   </div>
-</div>
+
+</div> <!--Fin de Grid Flexbox-->
 
 
 <!---MODALES---->
