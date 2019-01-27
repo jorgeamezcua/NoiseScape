@@ -42,11 +42,11 @@ body{
   grid-template-columns: 16% 21% 26% 21% 16%;
   grid-template-rows: 22% 22% 11% 22% 22%;
   grid-template-areas:
- "yoIng     yoIng          DBmenos   Romanos12   contacto "
- "      SitesGP     SitesGP      SitesGP    Temporales jazz  "
- "    webAudio  Guion        Animacion  Video   Musica     "
- "   app       adaptacion   Genera    Tokio   TemaGen      "
- "      app       insectos   Noise dic13       diseño     ";
+ "yoIng     yoIng        DBmenos   Romanos12   contacto "
+ "SitesGP   SitesGP      SitesGP   Temporales  jazz  "
+ "webAudio  Guion        Animacion Video       Musica     "
+ "app       adaptacion   Genera    dic13       TemaGen      "
+ "app       insectos     Noise     Tokio       diseño     ";
 }
 
 .titulo_zona{
