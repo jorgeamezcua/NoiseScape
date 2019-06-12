@@ -211,6 +211,7 @@ body{
   background-color: #008469;
   color:#27cead;
   animation-delay: 0.2s;
+  display: none;
 }
 #Animacion{
   grid-area: Animacion;
